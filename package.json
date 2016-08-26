@@ -1,0 +1,25 @@
+{
+  "name": "talkday-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "busboy": "^0.2.13",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.0",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "handlebars-intl": "^1.1.2",
+    "hbs": "~4.0.0",
+    "helmet": "^2.1.2",
+    "js-htmlencode": "^0.1.0",
+    "mandrill-api": "^1.0.45",
+    "mongoose": "^4.5.10",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  }
+}
