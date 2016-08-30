@@ -1,0 +1,25 @@
+<form method="post" action="/api/users/login" role="form" class="login-form">
+	{{#if error}}
+		<div class="form-group error-box">
+			{{error}}
+		</div>
+	{{/if}}
+	<div class="form-group">
+		<label class="label-full" for="username">Username:</label>
+		<input class="k-textbox" type="text" name="username" id="username" autofocus required style="display: inline-block; width: 100%;"/>
+	</div>
+
+	<div class="form-group">
+		<label class="label-full" for="password">Password:</label>
+		<input class="k-textbox" type="password" name="password" id="password" required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div>
+		<button type="submit" id="login-button" name="login-button" class="k-primary form-btn">Login</button>&nbsp;<a class="form-btn" id="register-button" href="/users/register">Register Now</a>
+	</div>
+</form>
+
+<script>
+	$('#login-button').kendoButton();
+	$('#register-button').kendoButton();
+</script>

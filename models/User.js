@@ -10,10 +10,11 @@ var Feedback = require('./Feedback');
 var userSchema = new mongoose.Schema({
 	username		: { type: String, unique: true, lowercase: true },
 	password		: { type: String },
-	email			: { type: String, unique: true, required: 'Email is required' },
-	firstName		: { type: String, required: 'First name is required' },
-	lastName		: { type: String, required: 'Last name is required.' },
-	mobile			: { type: String, default: '' },
+	email			: { type: String, unique: true },
+	firstName		: { type: String },
+	lastName		: { type: String },
+	mobileNo		: { type: String, default: '' },
+	mobileToken		: { type: String, default: '' },
 	profilePic		: { type: String, default: 'no_photo.png'},
 	_userType		: { type: mongoose.Schema.Types.ObjectId, ref: 'UserType' },			// Either 'Normal User', or 'Administrator'
 	_userPosts		: [ { type: mongoose.Schema.Types.ObjectId, ref: 'UserPost' } ],		// All the user's wall feeds

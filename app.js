@@ -11,14 +11,12 @@ var config = require('./config/config');
 var handlebarsIntl = require('handlebars-intl');    // Provides helpers that allow you to correctly format your content.
 var helmet = require('helmet');                     // Provide a security layer for your website.
 var MongoStore = require('connect-mongo')(session); // Works in conjunction with mongoose for connecting to your MongoDB database.
-var passport = require('./config/passport.js');     // For managing your user sessions
+//var passport = require('./config/passport.js');     // For managing your user sessions
 var flash = require('connect-flash');               // Useful for passing temporary data between page redirects
 var mongoose = require('mongoose');                 // Extremely useful when declaring your models in ExpressJS
+mongoose.Promise = require('bluebird');
 var hbs = require('hbs');
 var busboy = require('connect-busboy');             // We use this library when working with multi-part form postings
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -55,8 +53,8 @@ app.use(session({
     	httpOnly: true
   	}
 }));
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 app.use(flash());
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('select', function(selected, options) {
@@ -88,14 +86,22 @@ app.use(function (request, response, next) {
  * API Controllers
  */
 var userApiController = require('./controllers/api/User');
+var userTypeApiController = require('./controllers/api/UserType');
 
 /**
  * API Routes
  */
 app.use('/api/users', userApiController);
+app.use('/api/usertypes', userTypeApiController);
 
-app.use('/', routes);
-app.use('/users', users);
+/**
+ * Routes Controllers
+ */
+var userController = require('./controllers/routes/User');
+var homeController = require('./controllers/routes/Home');
+
+app.use('/', homeController);
+app.use('/users', userController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
