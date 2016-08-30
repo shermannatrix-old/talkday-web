@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="text-transform: uppercase; color: white; margin-right: 100px;">residence</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" style="text-transform: uppercase;">
+                {{#if admin_name}}
+					<li><a href="/residents/list">Manage Residents</a></li>
+					<li><a href="/properties/list">Manage Property</a></li>
+					<li><a href="/facilities/list">Manage Facilities</a></li>
+					<li><a href="/news/list">Manage News Feeds</a></li>
+                    <li><a href="/users/login">Logout</a></li>
+                {{else}}
+                    <li><a href="/users/login">Login</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>

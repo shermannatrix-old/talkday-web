@@ -1,0 +1,19 @@
+<div class="container flash-messages">
+    {{#if messages.error}}
+        {{#each messages.error}}
+            <p class="alert alert-danger">{{this}}</p>
+        {{/each}}
+    {{/if}}
+
+    {{#if messages.info}}
+        {{#each messages.info}}
+            <p class="alert alert-info">{{this}}</p>
+        {{/each}}
+    {{/if}}
+
+    {{#if messages.success}}
+        {{#each messages.success}}
+            <p class="alert alert-success">{{this}}</p>
+        {{/each}}
+    {{/if}}
+</div>
