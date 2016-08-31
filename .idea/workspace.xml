@@ -2,68 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71be5689-637a-41ae-9779-2b05482b9f1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/UserType.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/routes/Home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/routes/User.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/handlebars.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/home/dashboard.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/layout/flash.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/layout/navigation.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/create.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/login.hbs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/any.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/assert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/bind.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/bluebird.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/call_get.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/cancel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/captured_trace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/catch_filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/context.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/debuggability.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/direct_resolve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/each.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/errors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/es5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/filter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/generators.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/join.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/method.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/nodeify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/progress.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/promise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/promise_array.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/promise_resolver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/promisify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/props.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/race.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/reduce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/schedule.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/settle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/some.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/synchronous_inspection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/thenables.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/timers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/using.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/main/util.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/EventCategory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/EventType.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/EventVenue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/api/UserPost.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/list.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/User.js" afterPath="$PROJECT_DIR$/controllers/api/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.js" afterPath="$PROJECT_DIR$/models/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bluebird/README.md" afterPath="$PROJECT_DIR$/node_modules/bluebird/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bluebird/changelog.md" afterPath="$PROJECT_DIR$/node_modules/bluebird/changelog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.js" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.min.js" afterPath="$PROJECT_DIR$/node_modules/bluebird/js/browser/bluebird.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bluebird/package.json" afterPath="$PROJECT_DIR$/node_modules/bluebird/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/busboy/package.json" afterPath="$PROJECT_DIR$/node_modules/busboy/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mpromise/package.json" afterPath="$PROJECT_DIR$/node_modules/mpromise/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/routes/User.js" afterPath="$PROJECT_DIR$/controllers/routes/User.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.hbs" afterPath="$PROJECT_DIR$/views/layout.hbs" />
     </list>
     <ignored path="talkday-web.iws" />
@@ -86,88 +33,7 @@
     <favorites_list name="talkday-web" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="73" column="89" selection-start-line="73" selection-start-column="89" selection-end-line="73" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/routes/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/home/dashboard.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/login.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -196,11 +62,16 @@
         <option value="$PROJECT_DIR$/views/layout.hbs" />
         <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/models/User.js" />
-        <option value="$PROJECT_DIR$/controllers/routes/User.js" />
         <option value="$PROJECT_DIR$/views/user/create.hbs" />
         <option value="$PROJECT_DIR$/views/partials/layout/navigation.hbs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/controllers/api/User.js" />
+        <option value="$PROJECT_DIR$/controllers/routes/User.js" />
+        <option value="$PROJECT_DIR$/views/user/list.hbs" />
+        <option value="$PROJECT_DIR$/controllers/api/UserPost.js" />
+        <option value="$PROJECT_DIR$/controllers/api/EventType.js" />
+        <option value="$PROJECT_DIR$/controllers/api/EventCategory.js" />
+        <option value="$PROJECT_DIR$/controllers/api/EventVenue.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -246,8 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,38 +145,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -323,10 +160,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,6 +211,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,17 +312,18 @@
       <workItem from="1472436311874" duration="6180000" />
       <workItem from="1472532331406" duration="2601000" />
       <workItem from="1472544841783" duration="5625000" />
+      <workItem from="1472628434144" duration="5138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26598000" />
+    <option name="totallyTimeSpent" value="31736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2329" y="74" width="1680" height="1023" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -522,54 +358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/UserType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -715,20 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/EventType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/EventVenue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="136" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Feedback.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -754,13 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/UserPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -793,19 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/UserType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/UserType.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +577,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="400">
           <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding />
         </state>
@@ -829,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,14 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -873,26 +621,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="832">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#136#142#0#HTML" expanded="true" />
+            <marker date="1472629221000" expanded="true" signature="601:620" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="703:709" ph=" " />
+            <marker date="1472629221000" expanded="true" signature="987:1006" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1052:1071" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1132:1150" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1471:1490" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1537:1556" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1684:1703" ph="..." />
+            <marker date="1472629221000" expanded="true" signature="1750:1769" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/event/create.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="352">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/EventType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="73" column="89" selection-start-line="73" selection-start-column="89" selection-end-line="73" selection-end-column="89" />
+        <state relative-caret-position="781">
+          <caret line="348" column="0" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/UserPost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/UserPost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/UserType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/EventType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/EventCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/EventVenue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="136" selection-start-line="20" selection-start-column="136" selection-end-line="20" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/EventVenue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="103" column="53" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
           <folding />
         </state>
       </provider>

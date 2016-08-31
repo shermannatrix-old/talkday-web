@@ -1,0 +1,69 @@
+<div class="buttons-panel">
+	<a id="add-user" class="control-buttons form-btn k-primary" href="/users/create" type="button">Add User</a>&nbsp;
+</div>
+
+<div id="grid-users" class="grid-listing-view"></div>
+
+<script language="JavaScript">
+	$('.control-buttons').kendoButton();
+
+	$("#grid-users").kendoGrid({
+		dataSource: {
+			type: "json",
+			transport: {
+				read: "{{baseUri}}api/users/get_all_users"
+			},
+			pageSize: 20
+		},
+		height: 550,
+		groupable: true,
+		sortable: true,
+		pageable: {
+			refresh: true,
+			pageSizes: true,
+			buttonCount: 5
+		},
+		columns: [
+			{
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/users/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+				"<a class='form-btn grid-buttons k-button' href='/api/users/delete_user/?id=#: _id#'>Delete</a></span>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},
+			{
+				field: "username",
+				title: "Username",
+				width: 180
+			},
+			{
+				headerTemplate: "<div style='text-align: center;'>Password</div>",
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button k-primary' style='padding: 4px 20px;' href='/api/users/reset_password/?id=#: _id#'>Reset</a></span>",
+				field: "_id",
+				title: "Password",
+				width: 110
+			},
+			{
+				field: "email",
+				title: "Email"
+			}, {
+				field: "firstName",
+				title: "Firstname"
+			}, {
+				field: "lastName",
+				title: "Lastname"
+			}, {
+				headerTemplate: "<div style='text-align: center;'>Mobile No</div>",
+				template: "<div style='text-align: center;'>#: mobileNo#</span>",
+				field: "mobileNo",
+				title: "Mobile No.",
+				width: 150
+			}, {
+				headerTemplate: "<div style='text-align: center;'>User Type</div>",
+				template: "<div style='text-align: center;'><strong>#: _userType.typeName#</strong></span>",
+				field: "_userType.typeName",
+				title: "User Type"
+			}
+		]
+	});
+</script>

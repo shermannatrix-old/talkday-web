@@ -87,12 +87,21 @@ app.use(function (request, response, next) {
  */
 var userApiController = require('./controllers/api/User');
 var userTypeApiController = require('./controllers/api/UserType');
+var userPostApiController = require('./controllers/api/UserPost');
+
+var eventTypeApiController = require('./controllers/api/EventType');
+var eventCategoryApiController = require('./controllers/api/EventCategory');
+var eventVenueApiController = require('./controllers/api/EventVenue');
 
 /**
  * API Routes
  */
 app.use('/api/users', userApiController);
 app.use('/api/usertypes', userTypeApiController);
+app.use('/api/userposts', userPostApiController);
+app.use('/api/eventtypes', eventTypeApiController);
+app.use('/api/eventcategories', eventCategoryApiController);
+app.use('/api/eventvenues', eventVenueApiController);
 
 /**
  * Routes Controllers
