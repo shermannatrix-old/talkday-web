@@ -12,6 +12,7 @@ var Event = require('./Event');
 var eventSpeakerSchema = new mongoose.Schema({
 	// The events the speaker has participated in before.
 	_events				: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Event' } ],
+	speakerPhoto		: { type: String },
 	speakerName			: { type: String },
 	speakerBio			: { type: String },
 	fieldsOfInterests	: { type: String },		// a speaker might be capable in multiple fields, i.e. NodeJS, JavaScript, etc

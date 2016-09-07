@@ -10,7 +10,7 @@ var Event = require('./Event');
  * Date Added: 26-08-2016
  */
 var eventVenueSchema = new mongoose.Schema({
-	venueName		: { type: String },
+	venueName		: { type: String, unique: true },
 	buildingName	: { type: String },
 	buildingNo		: { type: String },
 	streetAddr		: { type: String },

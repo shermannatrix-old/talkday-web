@@ -1,3 +1,9 @@
+/**
+ * The User.js controller will contain methods for creating new Users and also retrieving those values for listing purposes. This controller will also
+ * container method for login, forget password purposes.
+ * Created by: Sherman
+ * Updated on: 2016-09-07 7:00pm
+ */
 'use strict';
 
 var express = require('express');

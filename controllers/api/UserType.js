@@ -1,3 +1,8 @@
+/**
+ * The UserType.js controller will contain methods for creating new User Types and also retrieving those values for listing purposes.
+ * Created by: Sherman
+ * Updated on: 2016-09-07 7:03pm
+ */
 'use strict';
 
 var express = require('express');

@@ -7,14 +7,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" style="text-transform: uppercase; color: white; margin-right: 100px;">Talkday App Management</a>
+            <a class="navbar-brand" href="/" style="text-transform: uppercase; color: white; margin-right: 100px;">talkday</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav" style="text-transform: uppercase;">
-                {{#if username}}
+                {{#if admin_name}}
 					<li><a href="/events/list">Manage Events</a></li>
 					<li><a href="/users/list">Manage Users</a></li>
-                    <li><a href="/users/login/?logout=1">Logout</a></li>
+                    <li><a href="/users/login">Logout</a></li>
                 {{else}}
                     <li><a href="/users/login">Login</a></li>
                 {{/if}}

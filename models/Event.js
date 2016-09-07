@@ -7,18 +7,21 @@ var EventCategory = require('./EventCategory');
 var EventVenue = require('./EventVenue');
 var EventSpeaker = require('./EventSpeaker');
 var Feedback = require('./Feedback');
-var UserEventRsvp = require('./UserEventRsvp')
+var UserEventRsvp = require('./UserEventRsvp');
+var EventStatus = require('./EventStatus');
 
 /**
  * The Event schema will store values for all the events in a particular area.
  * Created by: Sherman Chen
  * Date Added: 26-08-2016
+ * Date Updated	: 2016-09-07 7:06pm
  */
 var eventSchema = new mongoose.Schema({
 	eventName		: { type: String },
 	eventDesc		: { type: String },
 	timeSlotStart	: { type: Date, default: Date.now() },
 	timeSlotEnd		: { type: Date, default: Date.now() },
+	_eventStatus	: { type: mongoose.Schema.Types.ObjectId, ref: 'EventStatus'},
 	_eventType		: { type: mongoose.Schema.Types.ObjectId, ref: 'EventType' },
 	_eventCategory	: { type: mongoose.Schema.Types.ObjectId, ref: 'EventCategory' },
 	_eventVenue		: { type: mongoose.Schema.Types.ObjectId, ref: 'EventVenue' },

@@ -1,3 +1,8 @@
+/**
+ * The EventCategory.js controller will contain methods for creating new Event Categories and also retrieving those values for listing purposes.
+ * Created by: Sherman
+ * Updated on: 2016-09-07 6:57pm
+ */
 'use strict';
 
 var express = require('express');

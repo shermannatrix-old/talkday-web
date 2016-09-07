@@ -1,3 +1,16 @@
+/**
+ * This file is the main execution point of the entire application. Everything that this application does is initialized from here.
+ * Created by	: Sherman Chen
+ * Updated on	: 2016-09-07 7:30pm
+ * Update Log
+ * ==================================================================
+ * (1) EventVenue API Controller
+ * (2) EventStatus API Controller
+ * (3) Event API Controller
+ * (4) RsvpStatus API Controller
+ * (5) UserEventRsvp API Controller
+ */
+
 var express = require('express');
 var cors = require('cors');
 var path = require('path');
@@ -92,6 +105,12 @@ var userPostApiController = require('./controllers/api/UserPost');
 var eventTypeApiController = require('./controllers/api/EventType');
 var eventCategoryApiController = require('./controllers/api/EventCategory');
 var eventVenueApiController = require('./controllers/api/EventVenue');
+var eventSpeakerApiController = require('./controllers/api/EventSpeaker');
+var eventStatusApiController = require('./controllers/api/EventStatus');
+var eventApiController = require('./controllers/api/Event');
+
+var rsvpStatusApiController = require('./controllers/api/RsvpStatus');
+var userEventRsvpApiController = require('./controllers/api/UserEventRsvp');
 
 /**
  * API Routes
@@ -102,6 +121,11 @@ app.use('/api/userposts', userPostApiController);
 app.use('/api/eventtypes', eventTypeApiController);
 app.use('/api/eventcategories', eventCategoryApiController);
 app.use('/api/eventvenues', eventVenueApiController);
+app.use('/api/eventspeakers', eventSpeakerApiController);
+app.use('/api/eventstatuses', eventStatusApiController);
+app.use('/api/events', eventApiController);
+app.use('/api/rsvpstatuses', rsvpStatusApiController);
+app.use('/api/usereventrsvps', userEventRsvpApiController);
 
 /**
  * Routes Controllers
