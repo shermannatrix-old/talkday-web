@@ -109,6 +109,8 @@ var eventSpeakerApiController = require('./controllers/api/EventSpeaker');
 var eventStatusApiController = require('./controllers/api/EventStatus');
 var eventApiController = require('./controllers/api/Event');
 
+var feedbackStatusApiController = require('./controllers/api/FeedbackStatus');
+
 var rsvpStatusApiController = require('./controllers/api/RsvpStatus');
 var userEventRsvpApiController = require('./controllers/api/UserEventRsvp');
 
@@ -124,6 +126,7 @@ app.use('/api/eventvenues', eventVenueApiController);
 app.use('/api/eventspeakers', eventSpeakerApiController);
 app.use('/api/eventstatuses', eventStatusApiController);
 app.use('/api/events', eventApiController);
+app.use('/api/feedbackstatuses', feedbackStatusApiController);
 app.use('/api/rsvpstatuses', rsvpStatusApiController);
 app.use('/api/usereventrsvps', userEventRsvpApiController);
 
