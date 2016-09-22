@@ -1,14 +1,11 @@
 /**
  * This file is the main execution point of the entire application. Everything that this application does is initialized from here.
  * Created by	: Sherman Chen
- * Updated on	: 2016-09-07 7:30pm
+ * Updated on	: 2016-09-22 04:43pm
  * Update Log
  * ==================================================================
- * (1) EventVenue API Controller
- * (2) EventStatus API Controller
- * (3) Event API Controller
- * (4) RsvpStatus API Controller
- * (5) UserEventRsvp API Controller
+ * (1) EventCategory Route Controller
+ * (2) EventStatus Route Controller
  */
 
 var express = require('express');
@@ -138,10 +135,12 @@ app.use('/api/usereventrsvps', userEventRsvpApiController);
 var userController = require('./controllers/routes/User');
 var homeController = require('./controllers/routes/Home');
 var eventStatusController = require('./controllers/routes/EventStatus');
+var eventCategoryController = require('./controllers/routes/EventCategory');
 
 app.use('/', homeController);
 app.use('/users', userController);
 app.use('/eventstatus', eventStatusController);
+app.use('/eventcategories', eventCategoryController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

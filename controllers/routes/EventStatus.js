@@ -71,6 +71,7 @@ router.get('/create', function(request, response) {
 				title: 'Add Event Status',
 				baseUri: config.baseUri,
 				show_info: 'Record created.',
+				status_name: request.query.status,
 				fullname: request.cookies.fullname
 			});
 		}
