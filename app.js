@@ -110,6 +110,7 @@ var eventStatusApiController = require('./controllers/api/EventStatus');
 var eventApiController = require('./controllers/api/Event');
 
 var feedbackStatusApiController = require('./controllers/api/FeedbackStatus');
+var feedbackApiController = require('./controllers/api/Feedback');
 
 var rsvpStatusApiController = require('./controllers/api/RsvpStatus');
 var userEventRsvpApiController = require('./controllers/api/UserEventRsvp');
@@ -127,6 +128,7 @@ app.use('/api/eventspeakers', eventSpeakerApiController);
 app.use('/api/eventstatuses', eventStatusApiController);
 app.use('/api/events', eventApiController);
 app.use('/api/feedbackstatuses', feedbackStatusApiController);
+app.use('/api/feedbacks', feedbackApiController);
 app.use('/api/rsvpstatuses', rsvpStatusApiController);
 app.use('/api/usereventrsvps', userEventRsvpApiController);
 
@@ -135,9 +137,11 @@ app.use('/api/usereventrsvps', userEventRsvpApiController);
  */
 var userController = require('./controllers/routes/User');
 var homeController = require('./controllers/routes/Home');
+var eventStatusController = require('./controllers/routes/EventStatus');
 
 app.use('/', homeController);
 app.use('/users', userController);
+app.use('/eventstatus', eventStatusController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -51,9 +51,15 @@ h1 {
 	width: 100%;
 	margin: 15px auto;
 	text-align: left;
+	border: 1px solid #aaa;
 	padding: 10px;
 	border-radius: 4px;
 	background-color: #f1f1f1;
+
+	background: -webkit-linear-gradient(270deg, #fcfcfc, #f1f1f1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(270deg, #fcfcfc, #f1f1f1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(270deg, #fcfcfc, #f1f1f1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(270deg, #fcfcfc, #f1f1f1); /* Standard syntax */
 }
 
 .error-box {

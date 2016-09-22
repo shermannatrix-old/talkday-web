@@ -12,8 +12,8 @@ router.get('/dashboard', function (request, response, next) {
 	if (request.cookies.username) {
 		response.render('home/dashboard', {
 			title: 'Dashboard',
-			admin_name: request.cookies.admin_name,
-			username: request.cookies.username,
+			fullname: request.cookies.fullname,
+			userAccess: request.cookies.userAccess,
 			baseUri: config.baseUri
 		});
 	}

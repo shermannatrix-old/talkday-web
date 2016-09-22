@@ -2,6 +2,9 @@
  * The Feedback.js controller will contain methods for creating new Feedbacks and also retrieving those values for listing purposes.
  * Created by: Sherman
  * Updated on: 2016-09-07 7:28pm
+ * Additional Notes
+ * ===============================================================================================
+ *  - The feedback module is best tested through having the mobile app.
  */
 
 'use strict';
@@ -13,6 +16,26 @@ var Event = require('./../../models/Event');
 var Feedback = require('./../../models/Feedback');
 var FeedbackStatus = require('./../../models/FeedbackStatus');
 var User = require('./../../models/User');
+
+/**
+ * /get_feedbacks_by_event - this method takes an event Id query parameter and retrieves feedbacks related to that event.
+ * Created by	: Sherman Chen
+ * Date Created	: 2016-09-22 10:17am
+ */
+router.get('/get_feedbacks_by_event', function (request, response) {
+	var feedbacksByEvent = new Array();
+	var eventId = request.query.event;
+	
+	Feedback.find({}).populate('_event').exec(function (error, feedbacks) {
+		feedbacks.forEach(function(feedback, index) {
+			if (eventId == feedback._event._id) {
+				feedbacksByEvent.push(feedback);
+			}
+		});
+		
+		return response.json(feedbacksByEvent).status(200).end();
+	});
+});
 
 /**
  * /add_feedback - this method will add a new feedback document to the database.
@@ -76,6 +99,10 @@ router.post('/add_feedback', function (request, response) {
  * /updated_feedback - this method will update the feedback document record. At the same time, it will also check for related documents and remove those links.
  * Created by	: Sherman Chen
  * Date Created	: 2016-09-21 05:46pm
+ * Date Updated	: 2016-09-22 10:08am
+ * Update Log
+ * ===============================================================================================
+ * (1) Added the modeType to the context object when rendering the edit view.
  */
 router.post('/update_feedback', function (request, response) {
 	var eventId = request.body.event,
@@ -159,12 +186,13 @@ router.post('/update_feedback', function (request, response) {
 			}
 			
 			if (modeType == 'cms')
-				response.render('feedback/update', {
+				response.render('feedback/edit', {
 					title: 'Edit Feedback',
 					baseUri: config.baseUri,
 					show_info: 'Feedback Updated.',
 					feedback: updatedFeedback,
-					username: request.cookies.username
+					username: request.cookies.username,
+					mode: modeType
 				});
 			else
 				return response.json(updatedFeedback).status(200).end();

@@ -13,13 +13,13 @@ router.get('/login', function (request, response) {
 });
 
 router.get('/list', function (request, response) {
-	if (request.cookies.username) {
+	if (request.cookies.fullname) {
 		if ( request.query.error ) {
 			response.render ( 'user/list', {
 				title: 'User Listing',
 				baseUri: config.baseUri,
 				show_error: 'Error occured.',
-				username: request.cookies.username
+				fullname: request.cookies.fullname
 			} );
 		}
 		else if (request.query.deleted) {
@@ -27,14 +27,14 @@ router.get('/list', function (request, response) {
 				title: 'User Listing',
 				baseUri: config.baseUri,
 				show_info: 'Record deleted.',
-				username: request.cookies.username
+				fullname: request.cookies.fullname
 			} );
 		}
 		else {
 			response.render ( 'user/list', {
 				title: 'User Listing',
 				baseUri: config.baseUri,
-				username: request.cookies.username
+				fullname: request.cookies.fullname
 			});
 		}
 		
@@ -45,12 +45,12 @@ router.get('/list', function (request, response) {
 });
 
 router.get('/create', function (request, response) {
-	if (request.cookies.username) {
+	if (request.cookies.fullname) {
 		if (request.query.error) {
 			response.render('user/create', {
 				title: 'Add New User',
 				baseUri: config.baseUri,
-				username: request.cookies.username,
+				fullname: request.cookies.fullname,
 				show_error: 'Error occured'
 			});
 		}
@@ -58,7 +58,7 @@ router.get('/create', function (request, response) {
 			response.render('user/create', {
 				title: 'Add New User',
 				baseUri: config.baseUri,
-				username: request.cookies.username,
+				fullname: request.cookies.fullname,
 				show_info: 'Record created'
 			});
 		}
@@ -67,7 +67,7 @@ router.get('/create', function (request, response) {
 			response.render('user/create', {
 				title: 'Add New User',
 				baseUri: config.baseUri,
-				username: request.cookies.username,
+				fullname: request.cookies.fullname,
 			});
 		}
 	}

@@ -85,7 +85,7 @@ router.post('/login', function (request, response) {
 		
 		if (userDetails.password === request.body.password) {
 			response.cookie('username', userDetails.username, { maxAge: (days*24*60*60*1000) });
-			response.cookie('fullname', userDetails.firstName + ', ' + userDetails.lastName, { maxAge: (days*24*60*60*1000) });
+			response.cookie('fullname', userDetails.firstName + ' ' + userDetails.lastName, { maxAge: (days*24*60*60*1000) });
 			response.cookie('userAccess', userDetails._userType.typeName, { maxAge: (days*24*60*60*1000) });
 			
 			response.redirect('/dashboard');
@@ -147,6 +147,8 @@ router.post('/update_mobile_token', function (request, response) {
 });
 
 router.post('/add_user', function (request, response) {
+	var modeType = request.query.mode;
+	
 	var fstream;
 	var filePath;
 	var fileName;
@@ -207,7 +209,7 @@ router.post('/add_user', function (request, response) {
 				userType.save();
 			});
 			
-			if(request.query.mobile)
+			if(modeType != 'cms')
 				return response.json(user).status(201).end();
 			else
 				response.redirect('/users/create/?created=1');
@@ -217,6 +219,9 @@ router.post('/add_user', function (request, response) {
 });
 
 router.post('/update_user', function(request, response) {
+	
+	var modeType = request.query.mode;
+	
 	var fstream;
 	var filePath;
 	var fileName;
@@ -270,7 +275,7 @@ router.post('/update_user', function(request, response) {
 	};
 	
 	User.findOneAndUpdate(query, userDetails, {new: true}, function(error, doc) {
-		if (request.query.mobile) {
+		if (modeType != 'cms') {
 			return response.json({Message: 'User Details Updated'}).status(200).end();
 		}
 		else {

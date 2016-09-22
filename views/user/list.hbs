@@ -1,8 +1,13 @@
 <div class="buttons-panel">
-	<a id="add-user" class="control-buttons form-btn k-primary" href="/users/create" type="button">Add User</a>&nbsp;
+	<a id="manage-user" class="control-buttons form-btn" href="/users/list" disabled="disabled" type="button">Manage Users</a>
+	<a id="manage-user-type" class="control-buttons form-btn" href="/usertypes/list" type="button">Manage User Types</a>&nbsp;
 </div>
 
 <div id="grid-users" class="grid-listing-view"></div>
+
+<div class="buttons-panel">
+	<a id="add-user" class="control-buttons form-btn k-primary" href="/users/create" type="button">Add User</a>&nbsp;
+</div>
 
 <script language="JavaScript">
 	$('.control-buttons').kendoButton();
@@ -32,9 +37,23 @@
 				width: 168
 			},
 			{
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/userpostings/viewbyuser/?id=#: _id#'>View Posts</a>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},
+			{
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/feedbacks/userfeedbacks/?id=#: _id#'>View Feedbacks</a>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},
+			{
+				headerTemplate: "<div style='text-align: center;'>Username</div>",
+				template: "<div style='text-align: center;'>#: username#</span>",
 				field: "username",
 				title: "Username",
-				width: 180
+				width: 150
 			},
 			{
 				headerTemplate: "<div style='text-align: center;'>Password</div>",
@@ -48,10 +67,12 @@
 				title: "Email"
 			}, {
 				field: "firstName",
-				title: "Firstname"
+				title: "Firstname",
+				width: 120
 			}, {
 				field: "lastName",
-				title: "Lastname"
+				title: "Lastname",
+				width: 120
 			}, {
 				headerTemplate: "<div style='text-align: center;'>Mobile No</div>",
 				template: "<div style='text-align: center;'>#: mobileNo#</span>",
@@ -62,7 +83,8 @@
 				headerTemplate: "<div style='text-align: center;'>User Type</div>",
 				template: "<div style='text-align: center;'><strong>#: _userType.typeName#</strong></span>",
 				field: "_userType.typeName",
-				title: "User Type"
+				title: "User Type",
+				width: 120
 			}
 		]
 	});
