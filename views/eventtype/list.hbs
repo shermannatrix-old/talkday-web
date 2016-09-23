@@ -1,0 +1,57 @@
+<div class="buttons-panel">
+	<a id="manage-event" class="control-buttons form-btn k-primary" href="/events/list" type="button">Manage Events</a>&nbsp;
+	<a id="manage-speakers" class="control-buttons form-btn k-primary" href="/eventspeakers/list" type="button">Manage Event Speakers</a>&nbsp;
+	<a id="manage-event-venue" class="control-buttons form-btn k-primary" href="/eventvenues/list" type="button">Manage Event Venues</a>&nbsp;
+	<a id="manage-event-type" class="control-buttons form-btn" href="/eventtypes/list" disabled="disabled" type="button">Manage Event Types</a>&nbsp;
+	<a id="manage-event-category" class="control-buttons form-btn" href="/eventcategories/list" type="button">Manage Event Categories</a>&nbsp;
+	<a id="manage-event-status" class="control-buttons form-btn" href="/eventstatus/list" type="button">Manage Event Status</a>&nbsp;
+</div>
+
+{{#if show_error}}
+	<div class="form-group error-box">
+		An error occured while trying to delete the record.<br />Please contact the administrator for more information.
+	</div>
+{{/if}}
+
+{{#if show_info}}
+	<div class="form-group info-box">
+		The event type record has been deleted.
+	</div>
+{{/if}}
+
+<div id="grid-event-type" class="grid-listing-view"></div>
+
+<div class="buttons-panel">
+	<a id="add-event-type" class="control-buttons form-btn k-primary" href="/eventtypes/create" type="button">Add Event Type</a>&nbsp;
+</div>
+
+<script language="JavaScript">
+	$('.control-buttons').kendoButton();
+
+	$("#grid-event-type").kendoGrid({
+		dataSource: {
+			type: "json",
+			transport: {
+				read: "{{baseUri}}api/eventtypes/get_list"
+			},
+			pageSize: 20
+		},
+		height: 550,
+		groupable: false,
+		sortable: true,
+		pageable: false,
+		columns: [
+			{
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/eventtypes/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+				"<a class='form-btn grid-buttons k-button' href='/api/eventtypes/delete_event_type/?id=#: _id#'>Delete</a></span>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},
+			{
+				field: "typeName",
+				title: "Event Type Name"
+			}
+		]
+	});
+</script>

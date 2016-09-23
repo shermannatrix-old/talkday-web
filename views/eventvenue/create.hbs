@@ -1,0 +1,85 @@
+<form action="/api/eventvenues/create_event_venue/?mode=cms" method="post" role="form" class="properties-form">
+	{{#if show_error}}
+		<div class="form-group error-box">
+			An error occured while trying to create the record.<br />Please contact the administrator for more information.
+		</div>
+	{{/if}}
+
+	{{#if show_info}}
+		<div class="form-group info-box">
+			The event type record: {{type_name}} has been added.
+		</div>
+	{{/if}}
+
+	<div style="width: 100%; text-align: left; margin: 15px 0px;">
+		<a href="/eventtypes/list" class="btn">&larr;&nbsp;Back to list view</a>
+	</div>
+
+	<div class="form-group">
+		<label for="venueName" class="label-full">Venue name:</label>
+		<input class="k-textbox" type="text" name="venueName" id="venueName" autofocus required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<div id="map" style="width: 100%; height: 600px;"></div>
+		<script language="JavaScript">
+
+			// The following example creates a marker in Stockholm, Sweden using a DROP
+			// animation. Clicking on the marker will toggle the animation between a BOUNCE
+			// animation and no animation.
+
+			var marker;
+
+			var locationData = {
+				lat: 1.2924161,
+				lng: 103.8597216
+			};
+
+			function initMap() {
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 13,
+					center: locationData
+				});
+
+				marker = new google.maps.Marker({
+					map: map,
+					draggable: true,
+					animation: google.maps.Animation.DROP,
+					position: locationData
+				});
+				marker.addListener('click', toggleBounce);
+			}
+
+			function toggleBounce() {
+				if (marker.getAnimation() !== null) {
+					marker.setAnimation(null);
+				} else {
+					marker.setAnimation(google.maps.Animation.BOUNCE);
+				}
+			}
+
+			/* A function is required to capture the new location data and pass it to our fields. */
+		</script>
+		<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDFFARuc-s4_bMuHUX3EB9GF12lW7vm6k&callback=initMap">
+		</script>
+	</div>
+
+	<div class="form-group">
+		<label for="venue" class="label-full">Select a location for the Venue:</label>
+		<span class="label-short">Latitude:</span>&nbsp;<input class="k-textbox" name="latitude" id="latitude" style="display: inline-block; width: 20%;" />&nbsp;
+		<span class="label-short">Longitude:</span>&nbsp;<input class="k-textbox" name="longitude" id="longitude" style="display: inline-block; width: 20%;" />
+	</div>
+
+	<div style="margin-top: 25px;">
+		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+		<a class="btn" href="/eventtypes/list">Cancel</a>
+	</div>
+</form>
+
+<script language="JavaScript">
+	$('#submit-button').kendoButton();
+
+	$('#latitude').val(locationData.lat.toString());
+	$('#longitude').val(locationData.lng.toString());
+</script>
