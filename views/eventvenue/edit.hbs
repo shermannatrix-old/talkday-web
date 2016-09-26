@@ -1,0 +1,126 @@
+<form action="/api/eventvenues/update_venue/?id={{eventVenue._id}}&mode=cms" method="post" role="form" class="properties-form">
+	{{#if show_error}}
+		<div class="form-group error-box">
+			An error occured while trying to create the record.<br />Please contact the administrator for more information.
+		</div>
+	{{/if}}
+
+	{{#if show_info}}
+		<div class="form-group info-box">
+			The event venue record: {{eventVenue.venueName}} has been added.
+		</div>
+	{{/if}}
+
+	<div style="width: 100%; text-align: left; margin: 15px 0px;">
+		<a href="/eventvenues/list" class="btn">&larr;&nbsp;Back to list view</a>
+	</div>
+
+	<div class="form-group">
+		<label for="venueName" class="label-full">Venue name:</label>
+		<input class="k-textbox" type="text" name="venueName" id="venueName" value="{{eventVenue.venueName}}" autofocus required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<span class="label-short">Building No:</span>&nbsp;<input class="k-textbox" value="{{eventVenue.buildingNo}}" name="buildingNo" id="buildingNo" style="display: inline-block; width: 10%; text-align: left; margin-right: 2%;" />
+		<span class="label-short">Unit No:</span>&nbsp;<input class="k-textbox" name="unitNo" id="unitNo" value="{{eventVenue.buildingNo}}" style="display: inline-block; width: 18%; text-align: left;" />
+	</div>
+
+	<div class="form-group">
+		<label for="buildingName" class="label-full">Building Name:</label>
+		<input class="k-textbox" name="buildingName" id="buildingName" value="{{eventVenue.buildingName}}" style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="streetAddr" class="label-full">Street Address:</label>
+		<input class="k-textbox" name="streetAddr" id="streetAddr"  value="{{eventVenue.streetAddr}}" style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<span class="label-short">Postal Code:</span>&nbsp;<input class="k-textbox" name="postalCode" id="postalCode" value="{{eventVenue.postalCode}}" style="display: inline-block; width: 10%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="map" class="label-full">Select a location for the Venue:</label>
+		<div id="map" style="width: 100%; height: 600px;"></div>
+		<script language="JavaScript">
+
+			// The following example creates a marker in Stockholm, Sweden using a DROP
+			// animation. Clicking on the marker will toggle the animation between a BOUNCE
+			// animation and no animation.
+
+			var marker;
+
+			var latitude = "{{eventVenue.latitude}}";
+			var longitude = "{{eventVenue.longitude}}";
+
+			var locationData = {
+				lat: parseFloat(latitude),
+				lng: parseFloat(longitude)
+			};
+
+			function initMap() {
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 18,
+					center: locationData
+				});
+
+				marker = new google.maps.Marker({
+					map: map,
+					draggable: true,
+					animation: google.maps.Animation.DROP,
+					position: locationData
+				});
+
+				google.maps.event.addListener(marker, 'dragend', function() {
+
+					$('#latitude').val(marker.getPosition().lat().toFixed(7).toString());
+					$('#longitude').val(marker.getPosition().lng().toFixed(7).toString());
+
+					$('#submit-button').removeAttr('disabled');
+				});
+				//marker.addListener('click', toggleBounce);
+			}
+
+			function toggleBounce() {
+				if (marker.getAnimation() !== null) {
+					marker.setAnimation(null);
+				} else {
+					marker.setAnimation(google.maps.Animation.BOUNCE);
+				}
+			}
+
+			/* A function is required to capture the new location data and pass it to our fields. */
+		</script>
+		<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDFFARuc-s4_bMuHUX3EB9GF12lW7vm6k&callback=initMap">
+		</script>
+	</div>
+
+	<div class="form-group">
+		<span class="label-short">Latitude:</span>&nbsp;<input class="k-textbox" name="latitude" id="latitude" style="display: inline-block; width: 25%; text-align: center;" />&nbsp;
+		<span class="label-short">Longitude:</span>&nbsp;<input class="k-textbox" name="longitude" id="longitude" style="display: inline-block; width: 25%; text-align: center;" />
+	</div>
+
+	<div style="margin-top: 25px;">
+		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+		<a class="btn" href="/eventvenues/list">Cancel</a>
+	</div>
+</form>
+
+<script language="JavaScript">
+	$('#submit-button').kendoButton();
+
+	$('#latitude').val(locationData.lat.toString()).keydown( function () {
+		if (this.value === '' || this.value.toString().length <= 5)
+			$('#submit-button').attr('disabled', 'disabled');
+		else
+			$('#submit-button').removeAttr('disabled');
+	});
+
+	$('#longitude').val(locationData.lng.toString()).keydown( function () {
+		if (this.value === '' || this.value.toString().length <= 5)
+			$('#submit-button').attr('disabled', 'disabled');
+		else
+			$('#submit-button').removeAttr('disabled');
+	});
+</script>

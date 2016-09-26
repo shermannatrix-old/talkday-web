@@ -34,6 +34,7 @@ h1 {
 .label-short {
 	width: 150px;
 	margin-right: 4px;
+	font-weight: bold;
 }
 
 .label-150px {

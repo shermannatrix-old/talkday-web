@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71be5689-637a-41ae-9779-2b05482b9f1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/routes/EventType.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/routes/EventVenue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventtype/create.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventtype/edit.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventtype/list.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventvenue/create.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventvenue/edit.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/eventvenue/list.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/EventType.js" afterPath="$PROJECT_DIR$/controllers/api/EventType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/EventVenue.js" afterPath="$PROJECT_DIR$/controllers/api/EventVenue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/eventcategory/list.hbs" afterPath="$PROJECT_DIR$/views/eventcategory/list.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/eventvenue/create.hbs" afterPath="$PROJECT_DIR$/views/eventvenue/create.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/eventvenue/edit.hbs" afterPath="$PROJECT_DIR$/views/eventvenue/edit.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/eventvenue/list.hbs" afterPath="$PROJECT_DIR$/views/eventvenue/list.hbs" />
     </list>
     <ignored path="talkday-web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,22 +27,22 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="EventVenue.js" pinned="false" current-in-tab="false">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="EventVenue.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/models/EventVenue.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+                  <state relative-caret-position="572">
+                    <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+            <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="221">
-                    <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+                  <state relative-caret-position="247">
+                    <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
                     <folding />
                   </state>
                 </provider>
@@ -68,11 +58,11 @@
     <favorites_list name="talkday-web" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="286">
               <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
               <folding />
             </state>
@@ -82,19 +72,22 @@
       <file leaf-file-name="EventVenue.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/EventVenue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.js">
+      <file leaf-file-name="edit.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/eventvenue/edit.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="56" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="60" />
-              <folding />
+            <state relative-caret-position="-558">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#7;n#form#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,27 +95,19 @@
       <file leaf-file-name="EventVenue.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/routes/EventVenue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="116" column="32" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="32" />
+            <state relative-caret-position="1690">
+              <caret line="117" column="49" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/eventvenue/create.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-                <element signature="e#2179#2185#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-                <element signature="e#2285#2291#0#HTML" expanded="true" />
-                <element signature="e#2337#2343#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#5;n#form#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,8 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/CommentStatus.js" />
-        <option value="$PROJECT_DIR$/models/FeedbackStatus.js" />
         <option value="$PROJECT_DIR$/models/EventType.js" />
         <option value="$PROJECT_DIR$/models/EventCategory.js" />
         <option value="$PROJECT_DIR$/models/UserEventRsvp.js" />
@@ -186,6 +169,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/views/eventvenue/create.hbs" />
+        <option value="$PROJECT_DIR$/views/eventvenue/list.hbs" />
+        <option value="$PROJECT_DIR$/views/eventvenue/edit.hbs" />
       </list>
     </option>
   </component>
@@ -201,8 +186,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2113" />
-    <option name="y" value="458" />
+    <option name="x" value="1973" />
+    <option name="y" value="282" />
     <option name="width" value="1920" />
     <option name="height" value="1173" />
   </component>
@@ -279,84 +264,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="eventvenue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eventtype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,15 +382,16 @@
       <workItem from="1474447070062" duration="4084000" />
       <workItem from="1474510006203" duration="12009000" />
       <workItem from="1474597426862" duration="9124000" />
+      <workItem from="1474853900667" duration="6752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68518000" />
+    <option name="totallyTimeSpent" value="75270000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2113" y="458" width="1920" height="1173" extended-state="0" />
-    <editor active="false" />
+    <frame x="1973" y="282" width="1920" height="1173" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1937862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -601,14 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -743,7 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="115" column="36" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="793">
           <caret line="120" column="7" selection-start-line="108" selection-start-column="4" selection-end-line="120" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="871">
           <caret line="129" column="3" selection-start-line="89" selection-start-column="0" selection-end-line="129" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,18 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/eventtype/list.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding>
-            <marker date="1474615368000" expanded="true" signature="1730:1749" ph="..." />
-            <marker date="1474615368000" expanded="true" signature="1837:1843" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,10 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <marker date="1474615380000" expanded="true" signature="1760:1779" ph="..." />
-            <marker date="1474615380000" expanded="true" signature="1872:1878" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,7 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="793">
           <caret line="132" column="7" selection-start-line="117" selection-start-column="4" selection-end-line="132" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,23 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/eventvenue/edit.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/eventvenue/list.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,46 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/EventVenue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/EventVenue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/routes/EventVenue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="116" column="32" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -897,18 +719,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/EventVenue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/eventtype/list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="9" />
+          <folding>
+            <marker date="1474615368000" expanded="true" signature="1730:1749" ph="..." />
+            <marker date="1474615368000" expanded="true" signature="1837:1843" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/routes/EventVenue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1690">
+          <caret line="117" column="49" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/eventvenue/list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+          <folding>
+            <marker date="1474862149000" expanded="true" signature="1735:1754" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="1843:1849" ph=" " />
+            <marker date="1474862149000" expanded="true" signature="2180:2197" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2295:2312" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2414:2433" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2487:2506" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2620:2639" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2695:2714" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2832:2851" ph="..." />
+            <marker date="1474862149000" expanded="true" signature="2908:2927" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/EventVenue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/eventvenue/create.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/eventvenue/edit.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-558">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#!!top" expanded="true" />
-            <element signature="e#2179#2185#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#5;n#form#0;n#!!top" expanded="true" />
-            <element signature="e#2285#2291#0#HTML" expanded="true" />
-            <element signature="e#2337#2343#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#5;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#7;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
