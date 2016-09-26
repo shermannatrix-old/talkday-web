@@ -20,6 +20,11 @@
 		<input class="k-textbox" type="text" name="categoryName" id="categoryName" value="{{eventCategory.categoryName}}" autofocus required aria-required style="display: inline-block; width: 100%;" />
 	</div>
 
+	<div class="form-group">
+		<label class="label-full" for="colorCode">Color Code:</label>
+		<input name="colorCode" id="colorCode" value="{{eventCategory.colorCode}}" required style="display: inline-block; width: 100%;"/>
+	</div>
+
 	<div style="margin-top: 25px;">
 		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
 		<a class="btn" href="/eventcategories/list">Cancel</a>
@@ -27,5 +32,12 @@
 </form>
 
 <script language="JavaScript">
+
+	$('#colorCode').kendoColorPicker({
+		buttons: true,
+		preview: true
+
+	});
+
 	$('#submit-button').kendoButton();
 </script>

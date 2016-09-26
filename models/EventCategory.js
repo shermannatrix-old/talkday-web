@@ -11,6 +11,7 @@ var Event = require('./Event');
  */
 var eventCategorySchema = new mongoose.Schema({
 	_events			: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Event' } ],
+	colorCode		: { type: String },
 	categoryName	: { type: String }
 });
 

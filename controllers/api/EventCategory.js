@@ -47,17 +47,17 @@ router.get('/get_list_selection', function(request, response) {
  *
  * Created by		: Sherman Chen
  * Date Created		: 2016-09-07 06:57pm
- * Date Modified	: 2016-09-22 04:30pm
- * ==================================================================
+ * Date Updated	: 2016-09-26 03:35pm
+ * ===============================================================================================================
  * Update Log:
- * (1) Added modeType variable
- * (2) Added the categoryName into the query parameter when creation of document is successful.
+ * (1) Added the colorCode property for the Event Category class.
  */
 router.post('/create_event_category', function (request, response) {
 	var modeType = request.query.mode;
 	
 	var eventCategory = new EventCategory({
-		categoryName: request.body.categoryName
+		categoryName: request.body.categoryName,
+		colorCode: request.body.colorCode
 	});
 	
 	eventCategory.save(function(error) {
@@ -80,13 +80,18 @@ router.post('/create_event_category', function (request, response) {
  * HTTP Method	: POST
  * Created By	: Sherman Chen
  * Date Created	: 2016-09-22 04:19pm
+ * Date Updated	: 2016-09-26 03:35pm
+ * ===============================================================================================================
+ * Update Log:
+ * (1) Added the colorCode property for the Event Category class.
  */
 router.post('/update_event_category', function (request, response) {
 	var modeType = request.query.mode,		// Is the request coming from the CMS, frontend website or mobile app?
 		categoryId = request.query.id;		// The Event Category's _id value.
 	
 	var updateData = {
-		categoryName: request.body.categoryName
+		categoryName: request.body.categoryName,
+		colorCode: request.body.colorCode
 	};
 	
 	var query = {

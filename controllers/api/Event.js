@@ -17,6 +17,39 @@ var EventSpeaker = require('./../../models/EventSpeaker');
 var EventVenue = require('./../../models/EventVenue');
 var UserEventRsvp = require('./../../models/UserEventRsvp');
 
+router.get('/get_list', function (request, response) {
+	var eventViewModel = new Array();
+	
+	Event.find({}).populate('_eventType _eventCategory _eventStatus _eventVenue').exec(function (error, events) {
+		events.forEach(function(event, index) {
+			
+			var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '-' + event.startDate.getMonth().toString() + '-' + event.startDate.getDate() + ' ' + event.startTime);
+			var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '-' + event.endDate.getMonth().toString() + '-' + event.endDate.getDate() + ' ' + event.endTime);
+			
+			eventViewModel.push({
+				_id: event._id,
+				eventName: event.eventName,
+				eventDesc: event.eventDesc,
+				schedulerStartDate: new Date(schedulerStartDate.setHours(schedulerStartDate.getHours() + 8)),
+				schedulerEndDate: new Date(schedulerEndDate.setHours(schedulerEndDate.getHours() + 8)),
+				startDate: event.startDate,
+				endDate: event.endDate,
+				startTime: event.startTime,
+				endTime: event.endTime,
+				isAllDay: event.isAllDay,
+				eventStatus: event._eventStatus,
+				eventCategory: event._eventCategory,
+				eventType: event._eventType,
+				eventVenue: event._eventVenue,
+				eventTypeName: event._eventType.typeName,
+				eventCategoryName: event._eventCategory.categoryName
+			});
+		});
+		
+		return response.json(eventViewModel).status(200).end();
+	});
+});
+
 /**
  * parseDate() will accept a date value in string format and then convert it into an ISO standard format.
  * @param dateVal A selected date value passed from the UI.
@@ -27,10 +60,10 @@ function parseDate(dateVal) {
 	var month = dateVal.substr(3, 2);
 	var year = dateVal.substr(6, 4);
 	
-	var hour = dateVal.substr(11,2);
-	var min = dateVal.substr(14,2);
+	//var hour = dateVal.substr(11,2);
+	//var min = dateVal.substr(14,2);
 	
-	return year + '-' + month + '-' + day + 'T' + hour + ':' + min + ':00';
+	return year + '-' + month + '-' + day + 'T12:00:00';
 }
 
 
@@ -44,24 +77,36 @@ router.get('/get_list_selection', function(request, response) {
  * The /add_event method will accept a json object that is posted from the UI and insert a new Event record.
  */
 router.post('/add_event', function (request, response) {
-	var startTimeISO = parseDate(request.body.timeslotstarttime.toString());
-	var endTimeISO = parseDate(request.body.timeslotendtime.toString());
+	var startDateISO = parseDate(request.body.startDate.toString());
+	var endDateISO = parseDate(request.body.endDate.toString());
 	
-	console.log('Start Time: ' + startTimeISO + ', End Time: ' + endTimeISO);
+	console.log('Start Date: ' + startDateISO + ', End Date: ' + endDateISO);
+	console.log('Start Time: ' + request.body.startTime + ', End Time: ' + request.body.endTime);
 	
-	var finalStartTime = new Date(startTimeISO);
-	var finalEndTime = new Date(endTimeISO);
+	//var finalStartDate = new Date(startDateISO);
+	//var finalEndDate = new Date(endDateISO);
+	
+	var isAllDay = false;
+	
+	if (request.body.isAllDay)
+		isAllDay = true;
 	
 	var event = new Event({
 		eventName		: request.body.eventName,
 		eventDesc		: request.body.eventDesc,
-		timeSlotStart	: new Date(finalStartTime.setHours(finalStartTime.getHours())),
-		timeSlotEnd		: new Date(finalEndTime.setHours(finalEndTime.getHours())),
+		startDate		: new Date(startDateISO),
+		endDate			: new Date(endDateISO),
+		isAllDay		: isAllDay,
 		_eventStatus	: request.body.eventStatus,
 		_eventType		: request.body.eventType,
 		_eventCategory	: request.body.eventCategory,
 		_eventVenue		: request.body.eventVenue,
 	});
+	
+	if (!isAllDay) {
+		event.startTime = request.body.startTime;
+		event.endTime = request.body.endTime;
+	}
 	
 	event.save(function(error) {
 		if (error) {
@@ -81,7 +126,7 @@ router.post('/add_event', function (request, response) {
 			eventCategory.save();
 		});
 		
-		EventStatus.findOne({_id: reuest.body.eventStatus}, function (retStatusError, eventStatus) {
+		EventStatus.findOne({_id: request.body.eventStatus}, function (retStatusError, eventStatus) {
 			eventStatus._events.push(event);
 			eventStatus.save();
 		});
@@ -94,7 +139,7 @@ router.post('/add_event', function (request, response) {
 		if (request.query.mobile)
 			return response.json(event).status(201).end();
 		else
-			response.redirect('/events/create/?created=1');
+			response.redirect('/events/create/?created=1&event=' + event.eventName);
 	});
 });
 

@@ -1,0 +1,214 @@
+<div class="buttons-panel">
+	<a id="manage-event" class="control-buttons form-btn k-primary" href="/events/dashboard" disabled="disabled" type="button">Manage Events</a>&nbsp;
+	<a id="manage-speakers" class="control-buttons form-btn k-primary" href="/eventspeakers/list" type="button">Manage Event Speakers</a>&nbsp;
+	<a id="manage-event-venue" class="control-buttons form-btn k-primary" href="/eventvenues/list" type="button">Manage Event Venues</a>&nbsp;
+	<a id="manage-event-type" class="control-buttons form-btn" href="/eventtypes/list" type="button">Manage Event Types</a>&nbsp;
+	<a id="manage-event-category" class="control-buttons form-btn" href="/eventcategories/list" type="button">Manage Event Categories</a>&nbsp;
+	<a id="manage-event-status" class="control-buttons form-btn" href="/eventstatus/list" type="button">Manage Event Status</a>&nbsp;
+</div>
+
+<div style="text-align: left;">
+	<div id="tabstrip">
+		<ul>
+			<li class="k-state-active">
+				Schedule View
+			</li>
+			<li>
+				List View
+			</li>
+		</ul>
+		<div>
+			<h3>Events Schedule</h3>
+
+			<div id="scheduler-wrapper">
+
+			</div>
+		</div>
+		<div>
+			<h3>List of Events</h3>
+
+			<div class="buttons-panel">
+				<a id="add-event-btn" class="control-buttons form-btn k-primary" href="/events/create" type="button">Add Event</a>&nbsp;
+			</div>
+
+			<div id="grid-events" style="margin-bottom: 15px;"></div>
+		</div>
+	</div>
+</div>
+
+<script id="event-template" type="text/x-kendo-template">
+	<div>
+		<p>#: eventName#</p>
+		<p>
+			Event Type: #: eventTypeName#<br />
+			Event Category: #: eventCategoryName#
+		</p>
+		<p>
+			#: start # - #: end #
+		</p>
+	</div>
+</script>
+
+<script>
+	$("#tabstrip").kendoTabStrip({
+		animation:  {
+			open: {
+				effects: "fadeIn"
+			}
+		}
+	});
+
+	$("#grid-events").kendoGrid({
+		dataSource: {
+			type: "json",
+			transport: {
+				read: "{{baseUri}}api/events/get_list"
+			},
+			pageSize: 20
+		},
+		height: 550,
+		groupable: true,
+		sortable: true,
+		pageable: {
+			refresh: true,
+			pageSizes: true,
+			buttonCount: 5
+		},
+		columns: [
+			{
+				template: "<a class='form-btn grid-buttons k-button' href='/events/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+				"<a class='form-btn grid-buttons k-button' href='/api/events/delete_event/?id=#: _id#'>Delete</a>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},{
+				template: "<div style='text-align: center; border-radius: 5px; margin: 8px; height: 50px; width: 50px; background-color: #: eventCategory.colorCode#'></div>",
+				field: "colorCode",
+				title: " ",
+				width: 80
+			},
+			{
+				field: "eventType.typeName",
+				title: "Event Type",
+				width: 200
+			},
+			{
+				field: "eventCategory.categoryName",
+				title: "Event Category",
+				width: 150
+			},
+			{
+				field: "isAllDay",
+				title: "isAllDay?",
+				template: "<span># if (isAllDay) { # YES # } else { # NO # } #</span>"
+			},
+			{
+				field: "startDate",
+				title: "Start Date",
+				template: "<span>#: kendo.toString(new Date(kendo.parseDate(startDate)), 'dd-MM-yyyy')#</span>"
+			},
+			{
+				field: "startTime",
+				title: "Start Time"
+			},
+			{
+				field: "endDate",
+				title: "End Date",
+				template: "<span>#: kendo.toString(new Date(kendo.parseDate(endDate)), 'dd-MM-yyyy')#</span>"
+			},
+			{
+				field: "endTime",
+				title: "End Time"
+			},
+			{
+				field: "eventVenue.venueName",
+				title: "Venue"
+			},
+			{
+				field: "eventStatus.statusName",
+				title: "Status"
+			},
+		]
+	});
+
+	var categories = [];
+
+	var today = new Date();
+	var startTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7,0,0);
+	var endTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23,0,0);
+
+	$(document).ready(function() {
+
+		$('#scheduler-wrapper').html('<div id="scheduler"></div>');
+
+		$.get('{{baseUri}}api/eventcategories/get_list_selection', function(data) {
+			data.forEach(function (category) {
+				categories.push({
+					text: category.categoryName,
+					value: category._id,
+					color: category.colorCode
+				});
+			});
+
+			$("#scheduler").kendoScheduler({
+				date: new Date(),
+				timezone: "GMT0",
+				startTime: startTime,
+				endTime: endTime,
+				height: 700,
+				views: [
+					{ type: "day", showWorkHours: false },
+					{ type: "week", selected: true, showWorkHours: false },
+					"month",
+					"timeline"
+				],
+				eventTemplate: $("#event-template").html(),
+				currentTimeMarker: {
+					updateInterval: 100
+				},
+				dataSource: {
+					batch: false, // Enable batch updates
+					transport: {
+						read: {
+							url: "{{baseUri}}api/events/get_list",
+							dataType: "json"
+						}
+					},
+					schema: {
+						model: {
+							id: "eventId", // The "id" of the event is the "taskId" field
+							fields: {
+								// Describe the scheduler event fields and map them to the fields returned by the remote service
+								eventId: {
+									from: "_id", // The 'TaskID' server-side field is mapped to the 'taskId' client-side field
+									type: "string"
+								},
+								categoryId: { from: "eventCategory._id", nullable: false },
+								eventName: { from: "eventName", defaultValue: "No title", validation: { required: true } },
+								start: { type: "date", from: "schedulerStartDate" },
+								end: { type: "date", from: "schedulerEndDate" },
+								eventTypeName: { type: "string", from: "eventTypeName" },
+								eventCategoryName: { type: "string", from: "eventCategoryName" }
+							}
+						}
+					}
+				},
+				group: {
+					resources: ["Categories"],
+					orientation: "vertical"
+				},
+				resources: [
+					{
+						field: "categoryId",
+						name: "Categories",
+						dataSource: categories,
+						title: "Categories"
+					}
+				]
+			});
+		});
+
+	});
+
+	$('.control-buttons').kendoButton();
+</script>

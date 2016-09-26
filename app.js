@@ -138,6 +138,7 @@ var eventStatusController = require('./controllers/routes/EventStatus');
 var eventCategoryController = require('./controllers/routes/EventCategory');
 var eventTypeController = require('./controllers/routes/EventType');
 var eventVenueController = require('./controllers/routes/EventVenue');
+var eventController = require('./controllers/routes/Event');
 
 app.use('/', homeController);
 app.use('/users', userController);
@@ -145,6 +146,7 @@ app.use('/eventstatus', eventStatusController);
 app.use('/eventcategories', eventCategoryController);
 app.use('/eventtypes', eventTypeController);
 app.use('/eventvenues', eventVenueController);
+app.use('/events', eventController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

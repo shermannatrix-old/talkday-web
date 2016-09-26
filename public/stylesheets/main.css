@@ -32,7 +32,7 @@ h1 {
 }
 
 .label-short {
-	width: 150px;
+	min-width: 150px;
 	margin-right: 4px;
 	font-weight: bold;
 }
@@ -97,4 +97,9 @@ h1 {
 	padding: 15px;
 	margin: 0 auto;
 	text-align: left;
+}
+
+.venue-name-text {
+	font-weight: bold;
+	letter-spacing: 0.5px;
 }

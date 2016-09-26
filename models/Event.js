@@ -19,8 +19,11 @@ var EventStatus = require('./EventStatus');
 var eventSchema = new mongoose.Schema({
 	eventName		: { type: String },
 	eventDesc		: { type: String },
-	timeSlotStart	: { type: Date, default: Date.now() },
-	timeSlotEnd		: { type: Date, default: Date.now() },
+	startDate		: { type: Date, default: Date.now() },
+	endDate			: { type: Date, default: Date.now() },
+	startTime		: { type: String },
+	endTime			: { type: String },
+	isAllDay		: { type: Boolean, default: false },
 	_eventStatus	: { type: mongoose.Schema.Types.ObjectId, ref: 'EventStatus'},
 	_eventType		: { type: mongoose.Schema.Types.ObjectId, ref: 'EventType' },
 	_eventCategory	: { type: mongoose.Schema.Types.ObjectId, ref: 'EventCategory' },
