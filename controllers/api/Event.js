@@ -18,13 +18,15 @@ var EventVenue = require('./../../models/EventVenue');
 var UserEventRsvp = require('./../../models/UserEventRsvp');
 
 router.get('/get_list', function (request, response) {
-	var eventViewModel = new Array();
+	var eventViewModel = [];
 	
 	Event.find({}).populate('_eventType _eventCategory _eventStatus _eventVenue').exec(function (error, events) {
 		events.forEach(function(event, index) {
 			
-			var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '-' + event.startDate.getMonth().toString() + '-' + event.startDate.getDate() + ' ' + event.startTime);
-			var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '-' + event.endDate.getMonth().toString() + '-' + event.endDate.getDate() + ' ' + event.endTime);
+			//var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '-' + (event.startDate.getMonth() + 1).toString() + '-' + event.startDate.getDate() + ' ' + event.startTime);
+			//var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '-' + (event.endDate.getMonth() + 1).toString() + '-' + event.endDate.getDate() + ' ' + event.endTime);
+			var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '/' + (event.startDate.getMonth() + 1).toString() + '/' + event.startDate.getDate() + ' ' + event.startTime);
+			var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '/' + (event.endDate.getMonth() + 1).toString() + '/' + event.endDate.getDate() + ' ' + event.endTime);
 			
 			eventViewModel.push({
 				_id: event._id,
@@ -37,12 +39,10 @@ router.get('/get_list', function (request, response) {
 				startTime: event.startTime,
 				endTime: event.endTime,
 				isAllDay: event.isAllDay,
-				eventStatus: event._eventStatus,
-				eventCategory: event._eventCategory,
-				eventType: event._eventType,
-				eventVenue: event._eventVenue,
-				eventTypeName: event._eventType.typeName,
-				eventCategoryName: event._eventCategory.categoryName
+				_eventStatus: event._eventStatus,
+				_eventCategory: event._eventCategory,
+				_eventType: event._eventType,
+				_eventVenue: event._eventVenue
 			});
 		});
 		

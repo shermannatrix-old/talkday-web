@@ -20,6 +20,11 @@
 		<div>
 			<h3>Events Schedule</h3>
 
+			<div class="buttons-panel">
+				<select id="eventCategories" name="eventCategories" style="display: inline-block; width: 300px;">
+				</select>
+			</div>
+
 			<div id="scheduler-wrapper">
 
 			</div>
@@ -38,18 +43,11 @@
 
 <script id="event-template" type="text/x-kendo-template">
 	<div>
-		<p>#: eventName#</p>
-		<p>
-			Event Type: #: eventTypeName#<br />
-			Event Category: #: eventCategoryName#
-		</p>
-		<p>
-			#: start # - #: end #
-		</p>
+		<p>#: title #</p>
 	</div>
 </script>
 
-<script>
+<script language="JavaScript">
 	$("#tabstrip").kendoTabStrip({
 		animation:  {
 			open: {
@@ -82,18 +80,18 @@
 				title: " ",
 				width: 168
 			},{
-				template: "<div style='text-align: center; border-radius: 5px; margin: 8px; height: 50px; width: 50px; background-color: #: eventCategory.colorCode#'></div>",
+				template: "<div style='text-align: center; border-radius: 5px; margin: 8px; height: 50px; width: 50px; background-color: #: _eventCategory.colorCode#'></div>",
 				field: "colorCode",
 				title: " ",
 				width: 80
 			},
 			{
-				field: "eventType.typeName",
+				field: "_eventType.typeName",
 				title: "Event Type",
 				width: 200
 			},
 			{
-				field: "eventCategory.categoryName",
+				field: "_eventCategory.categoryName",
 				title: "Event Category",
 				width: 150
 			},
@@ -121,11 +119,11 @@
 				title: "End Time"
 			},
 			{
-				field: "eventVenue.venueName",
+				field: "_eventVenue.venueName",
 				title: "Venue"
 			},
 			{
-				field: "eventStatus.statusName",
+				field: "_eventStatus.statusName",
 				title: "Status"
 			},
 		]
@@ -133,36 +131,77 @@
 
 	var categories = [];
 
+	var defaultCategory = '';
+
 	var today = new Date();
 	var startTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7,0,0);
-	var endTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23,0,0);
+	var endTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 24,0,0);
 
 	$(document).ready(function() {
 
 		$('#scheduler-wrapper').html('<div id="scheduler"></div>');
 
+		$.get("{{baseUri}}api/eventcategories/get_list_selection", function(categories) {
+			defaultCategory = categories[0]._id;
+		});
+
+		$('#eventCategories').kendoDropDownList({
+			index: 0,
+			dataTextField: "categoryName",
+			dataValueField: "_id",
+			dataSource: {
+				type: "json", // specifies data protocol
+				transport: {
+					read: "{{baseUri}}api/eventcategories/get_list_selection"
+				}
+			},
+			value: defaultCategory,
+			select: function (e) {
+
+				categories = [];
+
+				var scheduler = $("#scheduler").data("kendoScheduler");
+
+				scheduler.destroy();
+
+				$('#scheduler-wrapper').html('<div id="scheduler"></div>');
+
+				loadScheduler();
+			}
+		});
+
+		loadScheduler();
+
+	});
+
+	function loadScheduler() {
 		$.get('{{baseUri}}api/eventcategories/get_list_selection', function(data) {
 			data.forEach(function (category) {
-				categories.push({
-					text: category.categoryName,
-					value: category._id,
-					color: category.colorCode
-				});
+				if ($('#eventCategories').val() === category._id) {
+					categories.push({
+						text: category.categoryName,
+						value: category._id,
+						color: category.colorCode
+					});
+
+					console.log('Category: ' + category.categoryName);
+				}
+
+				console.log('{text: ' + category.categoryName + ', value: ' + category._id + '}');
 			});
 
 			$("#scheduler").kendoScheduler({
 				date: new Date(),
-				timezone: "GMT0",
 				startTime: startTime,
 				endTime: endTime,
-				height: 700,
+				height: 1000,
 				views: [
 					{ type: "day", showWorkHours: false },
 					{ type: "week", selected: true, showWorkHours: false },
 					"month",
 					"timeline"
 				],
-				eventTemplate: $("#event-template").html(),
+				//eventTemplate: $("#event-template").html(),
 				currentTimeMarker: {
 					updateInterval: 100
 				},
@@ -183,32 +222,29 @@
 									from: "_id", // The 'TaskID' server-side field is mapped to the 'taskId' client-side field
 									type: "string"
 								},
-								categoryId: { from: "eventCategory._id", nullable: false },
-								eventName: { from: "eventName", defaultValue: "No title", validation: { required: true } },
+								categoryId: { from: "_eventCategory._id", nullable: false },
+								title: { from: "eventName", defaultValue: "No title", validation: { required: true } },
 								start: { type: "date", from: "schedulerStartDate" },
-								end: { type: "date", from: "schedulerEndDate" },
-								eventTypeName: { type: "string", from: "eventTypeName" },
-								eventCategoryName: { type: "string", from: "eventCategoryName" }
+								end: { type: "date", from: "schedulerEndDate" }
 							}
 						}
 					}
 				},
 				group: {
-					resources: ["Categories"],
-					orientation: "vertical"
+					resources: ["EventCategories"],
+					orientation: "horizontal"
 				},
 				resources: [
 					{
 						field: "categoryId",
-						name: "Categories",
+						name: "EventCategories",
 						dataSource: categories,
-						title: "Categories"
+						title: "Category"
 					}
 				]
 			});
 		});
-
-	});
+	}
 
 	$('.control-buttons').kendoButton();
 </script>

@@ -1,7 +1,7 @@
 /**
  * The UserPost.js controller will contain methods for creating new User Posts and also retrieving those values for listing purposes.
  * Created by: Sherman
- * Updated on: 2016-09-07 7:02pm
+ * Updated on: 2016-09-27 01:27pm
  */
 'use strict';
 
@@ -22,6 +22,28 @@ router.use(busboy());
 router.get('/get_all_postings', function (request, response) {
 	UserPost.find({}).sort({dateAdded: 'desc'}).populate('_user').exec(function (error, userPostings) {
 		return response.json(userPostings).status(200).end();
+	});
+});
+
+/**
+ * /add_text_update - this API method will post a single text post.
+ * Http Method		: POST
+ * Created by		: Sherman Chen
+ * Date Created		: 2016-09-27 01:28pm
+ */
+router.post('/add_text_update', function (request, response) {
+	var userPost = new UserPost({
+		textUpdate: request.body.textUpdate,
+		_user: request.body.userId
+	});
+	
+	userPost.save(function (error) {
+		User.findOne({_id: request.body.userId}, function(findUserErr, userDetails) {
+			userDetails._userPosts.push(userPost);
+			userDetails.save();
+		});
+		
+		response.json(userPost).status(201).end();
 	});
 });
 

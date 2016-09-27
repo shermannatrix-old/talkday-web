@@ -26,35 +26,6 @@ router.get('/get_list_selection', function(request, response) {
 	});
 });
 
-router.post('/add_events', function (request, response) {
-	EventSpeaker.findOne({_id: request.query.id}).populate('_events').exec(function(retSpeakerError, speaker) {
-		Event.findOne({_id: request.query.event}, function(retEventError, event) {
-			speaker._events.push(event);
-			speaker.save(function(saveSpeakerError) {
-				if (saveSpeakerError) {
-					if (request.query.mobile) {
-						return response.json({Error: saveSpeakerError.toString(), ErrorStack: saveSpeakerError.stack.toString()}).status(500).end();
-					}
-					else
-					{
-						response.redirect('/eventspeakers/addevent/?error=1&id=' + request.query.id);
-					}
-				}
-				
-				event._speakers.push(speaker);
-				event.save();
-				
-				if (request.query.mobile)
-				{
-					return response.json(speaker).status(200).end();
-				}
-				else
-					response.redirect('/eventspeakers/addevent/?added=1&id=' + request.query.id);
-			});
-		});
-	});
-});
-
 router.post('/add_speaker', function (request, response) {
 	var fstream;
 	var filePath;
