@@ -76,6 +76,27 @@ router.get('/reset_password', function (request, response) {
 	});
 });
 
+/**
+ * /get_userdetails - this API will retrieve all the details of a single user document.
+ * Http Method		: GET
+ * Created by		: Sherman Chen
+ * Date Created		: 2016-09-28 02:38pm
+ */
+router.get('/get_userdetails', function (request, response) {
+	User.findOne({ username: request.query.username }).populate('_userType').then(function(userDetails) {
+		return response.json(userDetails).status(200).end();
+	}, function (error) {
+		if ( error ) {
+			if ( request.query.mobile ) {
+				return response.json ( { Error: error.toString (), ErrorStack: JSON.stringify ( error.stack ) } ).status ( 500 ).end ();
+			}
+			else {
+				response.redirect ( '/users/login?error=1' );
+			}
+		}
+	});
+});
+
 router.post('/login', function (request, response) {
 	User.findOne({ username: request.body.username }).populate('_userType').then(function(userDetails) {
 		

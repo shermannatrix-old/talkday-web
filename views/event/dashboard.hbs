@@ -44,6 +44,7 @@
 <script id="event-template" type="text/x-kendo-template">
 	<div>
 		<p>#: title #</p>
+		<p>#: eventType #</p>
 	</div>
 </script>
 
@@ -201,7 +202,7 @@
 					"month",
 					"timeline"
 				],
-				//eventTemplate: $("#event-template").html(),
+				eventTemplate: $("#event-template").html(),
 				currentTimeMarker: {
 					updateInterval: 100
 				},
@@ -225,7 +226,8 @@
 								categoryId: { from: "_eventCategory._id", nullable: false },
 								title: { from: "eventName", defaultValue: "No title", validation: { required: true } },
 								start: { type: "date", from: "schedulerStartDate" },
-								end: { type: "date", from: "schedulerEndDate" }
+								end: { type: "date", from: "schedulerEndDate" },
+								eventType: { type: "string", from: "_eventType.typeName" }
 							}
 						}
 					}

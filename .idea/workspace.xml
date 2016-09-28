@@ -2,12 +2,438 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71be5689-637a-41ae-9779-2b05482b9f1d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Black/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/BlueOpal/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Bootstrap/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Default/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Fiori/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Flat/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/HighContrast/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Material/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MaterialBlack/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Metro/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/MetroBlack/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Moonlight/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Nova/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Office365/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Silver/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/editor.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/editor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/imagebrowser.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/imagebrowser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/indeterminate.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/indeterminate.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading-image.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading-image.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading_2x.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/loading_2x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/markers.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/markers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/markers_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/markers_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/slider-h.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/slider-h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/slider-v.gif" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/slider-v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_kpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/Uniform/sprite_kpi_2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-Bold.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-BoldOblique.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-BoldOblique.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-ExtraLight.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-ExtraLight.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-Oblique.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans-Oblique.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSans.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-Bold.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-Oblique.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono-Oblique.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSansMono.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-Bold.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-Italic.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif-Italic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/DejaVuSerif.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.eot" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.woff" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/back.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.ttf" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.woff" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/wp8_icons.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/wp8_icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/wp8_inverseicons.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/wp8_inverseicons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/brushed-metal.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/brushed-metal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots1.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots10.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots11.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots12.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots13.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots2.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots3.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots4.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots5.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots6.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots7.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots8.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots9.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/dots9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/glass-lighter.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/glass-lighter.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/glass.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/glass.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/highlight.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/highlight.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/hsv-gradient.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/hsv-gradient.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/hue.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/hue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/leather1.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/leather1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/leather2.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/leather2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/noise.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/noise.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe1.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe2.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe3.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe4.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe5.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe6.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/stripe6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/transparency.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/transparency.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/transtexture.png" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/textures/transtexture.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/Event.js" afterPath="$PROJECT_DIR$/controllers/api/Event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/EventSpeaker.js" afterPath="$PROJECT_DIR$/controllers/api/EventSpeaker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/UserPost.js" afterPath="$PROJECT_DIR$/controllers/api/UserPost.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/User.js" afterPath="$PROJECT_DIR$/controllers/api/User.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/kendo.all.js" afterPath="$PROJECT_DIR$/public/javascripts/kendo.all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/kendo.timezones.min.js" afterPath="$PROJECT_DIR$/public/javascripts/kendo.timezones.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/LICENSE.txt" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/DejaVu/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.svg" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/fonts/glyphs/KendoUIGlyphs.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.svg" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/images/kendoui.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.black.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.blueopal.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.bootstrap.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.core.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.core.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.core.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-fiori.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-fiori.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-fiori.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-fiori.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.core.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.core.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.core.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-material.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.core.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.core.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.core.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-nova.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-office365.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-office365.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-office365.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common-office365.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.core.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.core.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.core.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.core.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.common.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.black.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.black.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.black.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.black.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.blueopal.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.blueopal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.blueopal.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.blueopal.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.bootstrap.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.default.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.default.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.default.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.default.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.fiori.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.fiori.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.fiori.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.fiori.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.flat.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.flat.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.flat.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.highcontrast.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.highcontrast.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.highcontrast.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.highcontrast.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.material.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.material.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.material.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.materialblack.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.materialblack.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.materialblack.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.materialblack.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metro.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metro.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metro.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metro.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metroblack.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metroblack.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metroblack.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.metroblack.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.moonlight.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.moonlight.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.moonlight.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.moonlight.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.nova.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.nova.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.nova.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.nova.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.office365.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.office365.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.office365.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.office365.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.silver.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.silver.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.silver.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.silver.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.uniform.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.uniform.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.uniform.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.dataviz.uniform.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.default.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.fiori.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.flat.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.highcontrast.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.material.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.materialblack.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metro.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.metroblack.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.all.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.all.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.all.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.all.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.dark.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.dark.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.dark.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.dark.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.light.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.light.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.light.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.android.light.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.blackberry.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.blackberry.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.blackberry.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.blackberry.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.common.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.common.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.common.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.common.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.fiori.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.fiori.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.fiori.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.fiori.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.flat.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.flat.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.flat.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.ios.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.ios.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.ios.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.ios.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.material.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.material.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.material.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.meego.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.meego.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.meego.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.meego.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.nova.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.nova.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.nova.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.nova.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.office365.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.office365.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.office365.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.office365.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.wp8.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.wp8.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.wp8.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.mobile.wp8.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.moonlight.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.nova.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.office365.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.rtl.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.rtl.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.rtl.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.rtl.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.silver.mobile.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.mobile.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.mobile.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/kendo-ui/kendo.uniform.mobile.min.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/event/dashboard.hbs" afterPath="$PROJECT_DIR$/views/event/dashboard.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/layout/navigation.hbs" afterPath="$PROJECT_DIR$/views/partials/layout/navigation.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.hbs" afterPath="$PROJECT_DIR$/views/layout.hbs" />
     </list>
     <ignored path="talkday-web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,14 +466,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.hbs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/event/dashboard.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="181" column="52" selection-start-line="181" selection-start-column="52" selection-end-line="181" selection-end-column="52" />
+            <state relative-caret-position="-4146">
+              <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="44" selection-end-column="9" />
               <folding>
-                <marker date="1474991920000" expanded="true" signature="2180:2186" ph=" " />
-                <marker date="1474991920000" expanded="true" signature="2377:2503" ph="..." />
+                <marker date="1475045153000" expanded="true" signature="2204:2210" ph=" " />
+                <marker date="1475045153000" expanded="true" signature="2401:2527" ph="..." />
               </folding>
             </state>
           </provider>
@@ -56,8 +482,8 @@
       <file leaf-file-name="schedule.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../projects/Residence/residents-web-api/views/booking/schedule.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-884">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
                 <marker date="1472637726000" expanded="true" signature="2236:2242" ph=" " />
                 <marker date="1472637726000" expanded="true" signature="2436:2557" ph="..." />
@@ -69,7 +495,7 @@
       <file leaf-file-name="Event.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/Event.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1885">
+            <state relative-caret-position="975">
               <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding />
             </state>
@@ -79,17 +505,17 @@
       <file leaf-file-name="UserEventRsvp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/UserEventRsvp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
+            <state relative-caret-position="975">
               <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventSpeaker.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventSpeaker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api/EventSpeaker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637">
+            <state relative-caret-position="676">
               <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
               <folding />
             </state>
@@ -120,7 +546,6 @@
         <option value="$PROJECT_DIR$/views/home/dashboard.hbs" />
         <option value="$PROJECT_DIR$/views/user/list.hbs" />
         <option value="$PROJECT_DIR$/views/user/create.hbs" />
-        <option value="$PROJECT_DIR$/controllers/api/User.js" />
         <option value="$PROJECT_DIR$/controllers/routes/User.js" />
         <option value="$PROJECT_DIR$/controllers/routes/EventStatus.js" />
         <option value="$PROJECT_DIR$/views/eventstatus/create.hbs" />
@@ -151,10 +576,11 @@
         <option value="$PROJECT_DIR$/controllers/routes/Event.js" />
         <option value="$PROJECT_DIR$/views/partials/layout/navigation.hbs" />
         <option value="$PROJECT_DIR$/controllers/api/UserPost.js" />
-        <option value="$PROJECT_DIR$/views/layout.hbs" />
-        <option value="$PROJECT_DIR$/views/event/dashboard.hbs" />
         <option value="$PROJECT_DIR$/controllers/api/Event.js" />
         <option value="$PROJECT_DIR$/controllers/api/EventSpeaker.js" />
+        <option value="$PROJECT_DIR$/controllers/api/User.js" />
+        <option value="$PROJECT_DIR$/views/event/dashboard.hbs" />
+        <option value="$PROJECT_DIR$/views/layout.hbs" />
       </list>
     </option>
   </component>
@@ -242,7 +668,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talkday-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,33 +842,35 @@
       <workItem from="1474895734806" duration="449000" />
       <workItem from="1474946657992" duration="13034000" />
       <workItem from="1474989599535" duration="2428000" />
+      <workItem from="1475022184274" duration="596000" />
+      <workItem from="1475041731825" duration="998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103354000" />
+    <option name="totallyTimeSpent" value="104948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="23" width="1829" height="1173" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16924779" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16924779" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24951519" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -699,24 +1177,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="175" column="42" selection-start-line="175" selection-start-column="42" selection-end-line="175" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/UserPost.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -728,10 +1192,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/EventSpeaker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/UserEventRsvp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/Event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../projects/Residence/residents-web-api/views/booking/schedule.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-884">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <marker date="1472637726000" expanded="true" signature="2236:2242" ph=" " />
             <marker date="1472637726000" expanded="true" signature="2436:2557" ph="..." />
@@ -739,38 +1235,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/event/dashboard.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="181" column="52" selection-start-line="181" selection-start-column="52" selection-end-line="181" selection-end-column="52" />
+        <state relative-caret-position="-4146">
+          <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="44" selection-end-column="9" />
           <folding>
-            <marker date="1474991920000" expanded="true" signature="2180:2186" ph=" " />
-            <marker date="1474991920000" expanded="true" signature="2377:2503" ph="..." />
+            <marker date="1475045153000" expanded="true" signature="2204:2210" ph=" " />
+            <marker date="1475045153000" expanded="true" signature="2401:2527" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/Event.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1885">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/UserEventRsvp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/EventSpeaker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
