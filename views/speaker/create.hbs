@@ -1,0 +1,57 @@
+<form action="/api/eventspeakers/add_speaker/?mode=cms" method="post" role="form" enctype="multipart/form-data" class="properties-form">
+	{{#if show_error}}
+		<div class="form-group error-box">
+			An error occured while trying to create the record.<br />Please contact the administrator for more information.
+		</div>
+	{{/if}}
+
+	{{#if show_info}}
+		<div class="form-group info-box">
+			The speaker record has been added.
+		</div>
+	{{/if}}
+
+	<div style="width: 100%; text-align: left; margin: 15px 0px;">
+		<a href="/eventspeakers/list" class="btn">&larr;&nbsp;Back to list view</a>
+	</div>
+
+	<div class="form-group">
+		<label for="speakerName" class="label-full">Speaker Name:</label>
+		<input class="k-textbox" type="text" name="speakerName" id="speakerName" autofocus required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="speakerBio" class="label-full">Speaker Bio:</label>
+		<textarea class="k-textbox" name="speakerBio" id="speakerBio" required aria-required style="display: inline-block; width: 100%;" rows="8"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="fieldsOfInterests" class="label-full">Interests:</label>
+		<input class="k-textbox" type="text" name="fieldsOfInterests" id="fieldsOfInterests" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="topicTitle" class="label-full">Topic Title:</label>
+		<input class="k-textbox" type="text" name="topicTitle" id="topicTitle" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="topicDesc" class="label-full">Topic Description:</label>
+		<textarea class="k-textbox" name="topicDesc" id="topicDesc" required aria-required style="display: inline-block; width: 100%;" rows="8"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label class="label-full" for="files">Speaker Photo</label>
+		<input name="files" id="files" type="file" />
+	</div>
+
+	<div style="margin-top: 25px;">
+		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+		<a class="btn" href="/eventspeakers/list">Cancel</a>
+	</div>
+</form>
+
+<script language="JavaScript">
+	$('#files').kendoUpload();
+	$('#submit-button').kendoButton();
+</script>

@@ -1,7 +1,12 @@
 /**
  * The Event.js controller will contain methods for creating new Events and also retrieving those values for listing purposes.
- * Created by: Sherman
- * Updated on: 2016-09-07 7:28pm
+ * Created by		: Sherman Chen
+ * Date Created		: 2016-09-07 7:28pm
+ * Date Modified	: 2016-09-29 09:07pm
+ * ===============================================================================================================
+ * Update Log:
+ * (1) Added the API method /get_event_speakers
+ * (2) Added the API method /assign_speakers
  */
 
 'use strict';
@@ -17,6 +22,12 @@ var EventSpeaker = require('./../../models/EventSpeaker');
 var EventVenue = require('./../../models/EventVenue');
 var UserEventRsvp = require('./../../models/UserEventRsvp');
 
+/**
+ * /get_list - this API method will return a list of Events in the form of a ViewModel collection.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-09-27 04:48pm
+ */
 router.get('/get_list', function (request, response) {
 	var eventViewModel = [];
 	
@@ -51,6 +62,72 @@ router.get('/get_list', function (request, response) {
 });
 
 /**
+ * /get_event_speakers?event=[eventId] - this API method will retrieve a list of all the speakers speaking at the event.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-09-29 08:54pm
+ */
+router.get('/get_event_speakers', function (request, response) {
+	var eventId = request.query.event;
+	
+	Event.find({_id: eventId}).populate('_speakers').exec(function(error, eventDetails) {
+		if (error) {
+				return response.json({ErrorDetails: error.toString(), ErrorStack: error.stack.toString()}).status(500).end();
+		}
+		
+		return response.json(eventDetails._speakers).status(200).end();
+	});
+});
+
+/**
+ * /assign_speakers/?event=[eventId]&speaker=[speakerId] - this API method will add the speaker to the selected Event.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-09-29 09:06pm
+ */
+router.get('/assign_speakers', function (request, response) {
+	var eventId = request.query.event,
+		speakerId = request.query.speaker,
+		modeType = request.query.mode;
+	
+	Event.findOne({_id: eventId}).populate('_speakers').exec(function (getEventErr, event) {
+		if ( getEventErr ) {
+			if ( modeType == 'cms' )
+				response.redirect ( '/events/view_speakers/?event=' + eventId + '&error=1' );
+			else
+				return response.json ( { ErrorDetails: error.toString (), ErrorStack: error.stack.toString () } ).status ( 500 ).end ();
+		}
+		// Check to see if the event already has the speaker. If no, then add the speaker to the Event.
+		if ( !event._speakers.contains ( speakerId ) ) {
+			event._speakers.push ( speakerId );
+			event.save ();
+		}
+		
+		EventSpeaker.findOne({_id: speakerId}).populate('_events').exec(function (getSpeakerErr, speaker) {
+			if (getSpeakerErr) {
+				if ( modeType == 'cms' )
+					response.redirect ( '/events/view_speakers/?event=' + eventId + '&error=1' );
+				else
+					return response.json ( { ErrorDetails: error.toString (), ErrorStack: error.stack.toString () } ).status ( 500 ).end ();
+			}
+			
+			// Likewise, check to see if the Speaker is already speaking at this Event. If not, add the Event to the Speaker's _events collection.
+			if (!speaker._events.contains(eventId)) {
+				speaker._events.push ( event );
+				speaker.save ();
+			}
+			
+			if (modeType == 'cms')
+			{
+				response.redirect('/events/view_speakers/?event=' + eventId + '&updated=1');
+			}
+			else
+				return response.json({Event: event, Speaker: speaker}).status(200).end();
+		});
+	});
+});
+
+/**
  * parseDate() will accept a date value in string format and then convert it into an ISO standard format.
  * @param dateVal A selected date value passed from the UI.
  * @returns {string} The final date value in ISO format.
@@ -75,6 +152,9 @@ router.get('/get_list_selection', function(request, response) {
 
 /**
  * The /add_event method will accept a json object that is posted from the UI and insert a new Event record.
+ * Http Method		: POST
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-09-07 7:28pm
  */
 router.post('/add_event', function (request, response) {
 	var startDateISO = parseDate(request.body.startDate.toString());
@@ -140,6 +220,27 @@ router.post('/add_event', function (request, response) {
 			return response.json(event).status(201).end();
 		else
 			response.redirect('/events/create/?created=1&event=' + event.eventName);
+	});
+});
+
+/**
+ * /delete_event - this API method will delete a single Event record.
+ */
+router.get('/delete_event', function (request, response) {
+	var modeType = request.query.mode;
+	
+	Event.findOneAndRemove({_id: request.query.id}, function(error, event) {
+		if (error) {
+			if (modeType != 'cms')
+				return response.json({Error: error.toString(), Stack: error.stack.toString()}).status(200).end();
+			else
+				response.redirect('/events/dashboard/?tab=list&id=' + request.query.id + '&error=1');
+		}
+		
+		if (modeType != 'cms')
+			return response.json({message: 'Event has been deleted.'}).status(200).end();
+		else
+			response.redirect('/events/dashboard/?tab=list&deleted=1');
 	});
 });
 

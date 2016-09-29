@@ -1,0 +1,72 @@
+<div class="buttons-panel">
+	<a id="manage-event" class="control-buttons form-btn k-primary" href="/events/dashboard" type="button">Manage Events</a>&nbsp;
+	<a id="manage-speakers" class="control-buttons form-btn k-primary" href="/eventspeakers/list" disabled="disabled" type="button">Manage Event Speakers</a>&nbsp;
+	<a id="manage-event-venue" class="control-buttons form-btn k-primary" href="/eventvenues/list" type="button">Manage Event Venues</a>&nbsp;
+	<a id="manage-event-type" class="control-buttons form-btn" href="/eventtypes/list" type="button">Manage Event Types</a>&nbsp;
+	<a id="manage-event-category" class="control-buttons form-btn" href="/eventcategories/list" type="button">Manage Event Categories</a>&nbsp;
+	<a id="manage-event-status" class="control-buttons form-btn" href="/eventstatus/list" type="button">Manage Event Status</a>&nbsp;
+</div>
+
+<div id="grid-speakers" class="grid-listing-view"></div>
+
+<div class="buttons-panel">
+	<a id="add-speaker" class="control-buttons form-btn k-primary" href="/eventspeakers/create" type="button">Add Speaker Profile</a>&nbsp;
+</div>
+
+<script language="JavaScript">
+	$('.control-buttons').kendoButton();
+
+	$("#grid-speakers").kendoGrid({
+		dataSource: {
+			type: "json",
+			transport: {
+				read: "{{baseUri}}api/eventspeakers/get_all_speakers"
+			},
+			pageSize: 20
+		},
+		height: 550,
+		groupable: true,
+		sortable: true,
+		pageable: {
+			refresh: true,
+			pageSizes: true,
+			buttonCount: 5
+		},
+		columns: [
+			{
+				template: "<a class='form-btn grid-buttons k-button' href='/eventspeakers/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+				"<a class='form-btn grid-buttons k-button' href='/api/eventspeakers/delete_speaker/?id=#: _id#'>Delete</a>",
+				field: "_id",
+				title: " ",
+				width: 168
+			},
+			{
+				headerTemplate: "<span style='text-align: center;'>Photo</span>",
+				template: "<div style='text-align: center;'><img src='#: speakerPhoto#' style='width: 150px; height: auto;' /></div>",
+				field: "speakerPhoto",
+				title: "Speaker Photo",
+				width: 170
+			},
+			{
+				field: "speakerName",
+				title: "Speaker Name"
+			},
+			{
+				field: "speakerBio",
+				title: "Speaker Bio"
+			},
+			{
+				field: "fieldsOfInterests",
+				title: "Fields of Interests"
+			},
+			{
+				field: "topicTitle",
+				title: "Topic Title"
+			},
+			{
+				field: "topicDesc",
+				title: "Topic Abstract"
+			}
+		]
+	});
+</script>
