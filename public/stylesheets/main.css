@@ -103,3 +103,7 @@ h1 {
 	font-weight: bold;
 	letter-spacing: 0.5px;
 }
+
+.k-event, .k-event-inverse {
+	border-radius: 5px;
+}

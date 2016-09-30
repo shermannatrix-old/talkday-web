@@ -9,5 +9,5 @@ module.exports = {
 
 	mailerPassword: "sher@1509",
 
-	baseUri: "http://localhost:2080/"
+	baseUri: "http://localhost:2080"
 };

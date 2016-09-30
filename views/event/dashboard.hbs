@@ -21,13 +21,12 @@
 			<h3>Events Schedule</h3>
 
 			<div class="buttons-panel">
+				<label for="eventCategories" style="text-align: left; margin-right: 15px;">Select a Category:</label>
 				<select id="eventCategories" name="eventCategories" style="display: inline-block; width: 300px;">
 				</select>
 			</div>
 
-			<div id="scheduler-wrapper">
-
-			</div>
+			<div id="scheduler-wrapper"></div>
 		</div>
 		<div>
 			<h3>List of Events</h3>
@@ -37,19 +36,32 @@
 			</div>
 
 			<div id="grid-events" style="margin-bottom: 15px;"></div>
+
+			<script type="text/x-kendo-template" id="event-details-template">
+				<div style="width: 100%; margin: 5px;">
+					<p style="font-size: 12px; width: 100%; padding: 5px; line-height: 1.3em;">
+						<label style="width: 120px; text-align: right; margin-right: 5px;">Venue:</label>#: _eventVenue.venueName#<br />
+						<label style="width: 120px; text-align: right; margin-right: 5px;">Event Type:</label>#: _eventType.typeName#<br />
+						<label style="width: 120px; text-align: right; margin-right: 5px;">Event Category:</label>#: _eventCategory.categoryName#<br />
+					</p>
+				</div>
+			</script>
 		</div>
 	</div>
 </div>
 
-<script id="event-template" type="text/x-kendo-template">
+<script type="text/x-kendo-template" id="scheduler-event-template">
 	<div>
-		<p>#: title #</p>
-		<p>#: eventType #</p>
+		<p style="font-size: 14px; font-weight: bold; width: 100%; padding: 5px; text-wrap: normal;">#: title #</p>
+		<p style="font-size: 12px; width: 100%; padding: 5px;">
+			#: startTime# to #: endTime#
+		</p>
+		<p style="font-size: 12px; width: 100%; padding: 5px;">#: eventType #</p>
 	</div>
 </script>
 
-<script language="JavaScript">
-	$("#tabstrip").kendoTabStrip({
+<script>
+	$('#tabstrip').kendoTabStrip({
 		animation:  {
 			open: {
 				effects: "fadeIn"
@@ -57,11 +69,12 @@
 		}
 	});
 
-	$("#grid-events").kendoGrid({
+
+	$('#grid-events').kendoGrid({
 		dataSource: {
 			type: "json",
 			transport: {
-				read: "{{baseUri}}api/events/get_list"
+				read: "{{baseUri}}/api/events/get_all_events"
 			},
 			pageSize: 20
 		},
@@ -73,13 +86,14 @@
 			pageSizes: true,
 			buttonCount: 5
 		},
+		detailTemplate: kendo.template($("#event-details-template").html()),
 		columns: [
 			{
-				template: "<a class='form-btn grid-buttons k-button' href='/events/edit/?id=#: _id#'>Edit</a>&nbsp;" +
-				"<a class='form-btn grid-buttons k-button' href='/api/events/delete_event/?id=#: _id#'>Delete</a>",
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/events/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+				"<a class='form-btn grid-buttons k-button' href='/api/events/delete_event/?id=#: _id#'>Delete</a></div>",
 				field: "_id",
 				title: " ",
-				width: 168
+				width: 188
 			},{
 				template: "<div style='text-align: center; border-radius: 5px; margin: 8px; height: 50px; width: 50px; background-color: #: _eventCategory.colorCode#'></div>",
 				field: "colorCode",
@@ -87,48 +101,36 @@
 				width: 80
 			},
 			{
-				field: "_eventType.typeName",
-				title: "Event Type",
-				width: 200
-			},
-			{
-				field: "_eventCategory.categoryName",
-				title: "Event Category",
-				width: 150
+				field: "eventName",
+				title: "Event Name"
 			},
 			{
 				field: "isAllDay",
 				title: "isAllDay?",
-				template: "<span># if (isAllDay) { # YES # } else { # NO # } #</span>"
+				template: "<span># if (isAllDay) { # YES # } else { # NO # } #</span>",
+				headerTemplate: "<div style='text-align: center;'>isAllDay?</div>",
+				width: 100
 			},
 			{
 				field: "startDate",
 				title: "Start Date",
-				template: "<span>#: kendo.toString(new Date(kendo.parseDate(startDate)), 'dd-MM-yyyy')#</span>"
-			},
-			{
-				field: "startTime",
-				title: "Start Time"
+				template: "<span>#: kendo.toString(new Date(kendo.parseDate(startDate)), 'dd-MM-yyyy')# #: startTime#</span>",
+				width: 170
 			},
 			{
 				field: "endDate",
 				title: "End Date",
-				template: "<span>#: kendo.toString(new Date(kendo.parseDate(endDate)), 'dd-MM-yyyy')#</span>"
-			},
-			{
-				field: "endTime",
-				title: "End Time"
-			},
-			{
-				field: "_eventVenue.venueName",
-				title: "Venue"
+				template: "<span>#: kendo.toString(new Date(kendo.parseDate(endDate)), 'dd-MM-yyyy')# #: endTime#</span>",
+				width: 170
 			},
 			{
 				field: "_eventStatus.statusName",
-				title: "Status"
-			},
+				title: "Status",
+				width: 120
+			}
 		]
 	});
+
 
 	var categories = [];
 
@@ -142,7 +144,7 @@
 
 		$('#scheduler-wrapper').html('<div id="scheduler"></div>');
 
-		$.get("{{baseUri}}api/eventcategories/get_list_selection", function(categories) {
+		$.get('{{baseUri}}/api/eventcategories/get_list_selection', function(categories) {
 			defaultCategory = categories[0]._id;
 		});
 
@@ -153,7 +155,7 @@
 			dataSource: {
 				type: "json", // specifies data protocol
 				transport: {
-					read: "{{baseUri}}api/eventcategories/get_list_selection"
+					read: "{{baseUri}}/api/eventcategories/get_list_selection"
 				}
 			},
 			value: defaultCategory,
@@ -161,7 +163,7 @@
 
 				categories = [];
 
-				var scheduler = $("#scheduler").data("kendoScheduler");
+				var scheduler = $('#scheduler').data('kendoScheduler');
 
 				scheduler.destroy();
 
@@ -176,7 +178,7 @@
 	});
 
 	function loadScheduler() {
-		$.get('{{baseUri}}api/eventcategories/get_list_selection', function(data) {
+		$.get('{{baseUri}}/api/eventcategories/get_list_selection', function(data) {
 			data.forEach(function (category) {
 				if ($('#eventCategories').val() === category._id) {
 					categories.push({
@@ -188,21 +190,21 @@
 					console.log('Category: ' + category.categoryName);
 				}
 
-				console.log('{text: ' + category.categoryName + ', value: ' + category._id + '}');
+				//console.log('{text: ' + category.categoryName + ', value: ' + category._id + '}');
 			});
 
-			$("#scheduler").kendoScheduler({
+			$('#scheduler').kendoScheduler({
 				date: new Date(),
 				startTime: startTime,
 				endTime: endTime,
-				height: 1000,
+				height: 700,
 				views: [
 					{ type: "day", showWorkHours: false },
 					{ type: "week", selected: true, showWorkHours: false },
 					"month",
 					"timeline"
 				],
-				eventTemplate: $("#event-template").html(),
+				eventTemplate: $('#scheduler-event-template').html(),
 				currentTimeMarker: {
 					updateInterval: 100
 				},
@@ -210,7 +212,7 @@
 					batch: false, // Enable batch updates
 					transport: {
 						read: {
-							url: "{{baseUri}}api/events/get_list",
+							url: "{{baseUri}}/api/events/get_all_events",
 							dataType: "json"
 						}
 					},
@@ -219,27 +221,28 @@
 							id: "eventId", // The "id" of the event is the "taskId" field
 							fields: {
 								// Describe the scheduler event fields and map them to the fields returned by the remote service
-								eventId: {
-									from: "_id", // The 'TaskID' server-side field is mapped to the 'taskId' client-side field
-									type: "string"
-								},
-								categoryId: { from: "_eventCategory._id", nullable: false },
-								title: { from: "eventName", defaultValue: "No title", validation: { required: true } },
-								start: { type: "date", from: "schedulerStartDate" },
-								end: { type: "date", from: "schedulerEndDate" },
-								eventType: { type: "string", from: "_eventType.typeName" }
+								eventId		: { from: "_id", type: "string" },
+								categoryId	: { from: "_eventCategory._id" },
+								title		: { from: "eventName", defaultValue: "No title", validation: { required: true } },
+								description	: { from: "eventDesc" },
+								start		: { type: "date", from: "startDate" },
+								end			: { type: "date", from: "endDate" },
+								startTime	: { type: "string", from: "startTime" },
+								endTime		: { type: "string", from: "endTime" },
+								isAllDay	: { type: "boolean", from: "isAllDay" },
+								eventType	: { type: "string", from: "_eventType.typeName" }
 							}
 						}
 					}
 				},
 				group: {
-					resources: ["EventCategories"],
+					resources: ["Categories"],
 					orientation: "horizontal"
 				},
 				resources: [
 					{
 						field: "categoryId",
-						name: "EventCategories",
+						name: "Categories",
 						dataSource: categories,
 						title: "Category"
 					}

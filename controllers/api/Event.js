@@ -23,41 +23,18 @@ var EventVenue = require('./../../models/EventVenue');
 var UserEventRsvp = require('./../../models/UserEventRsvp');
 
 /**
- * /get_list - this API method will return a list of Events in the form of a ViewModel collection.
+ * /get_all_events - this API method will return a list of Events in the form of a ViewModel collection.
  * Http Method		: GET
  * Created By		: Sherman Chen
  * Date Created		: 2016-09-27 04:48pm
+ * Date Modified	: 2016-09-30 01:07pm
+ * ===============================================================================================================
+ * Update Log:
+ * (1) Updated the Web API name to /get_all_events
  */
-router.get('/get_list', function (request, response) {
-	var eventViewModel = [];
-	
+router.get('/get_all_events', function (request, response) {
 	Event.find({}).populate('_eventType _eventCategory _eventStatus _eventVenue').exec(function (error, events) {
-		events.forEach(function(event, index) {
-			
-			//var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '-' + (event.startDate.getMonth() + 1).toString() + '-' + event.startDate.getDate() + ' ' + event.startTime);
-			//var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '-' + (event.endDate.getMonth() + 1).toString() + '-' + event.endDate.getDate() + ' ' + event.endTime);
-			var schedulerStartDate = new Date(event.startDate.getFullYear().toString() + '/' + (event.startDate.getMonth() + 1).toString() + '/' + event.startDate.getDate() + ' ' + event.startTime);
-			var schedulerEndDate = new Date(event.endDate.getFullYear().toString() + '/' + (event.endDate.getMonth() + 1).toString() + '/' + event.endDate.getDate() + ' ' + event.endTime);
-			
-			eventViewModel.push({
-				_id: event._id,
-				eventName: event.eventName,
-				eventDesc: event.eventDesc,
-				schedulerStartDate: new Date(schedulerStartDate.setHours(schedulerStartDate.getHours() + 8)),
-				schedulerEndDate: new Date(schedulerEndDate.setHours(schedulerEndDate.getHours() + 8)),
-				startDate: event.startDate,
-				endDate: event.endDate,
-				startTime: event.startTime,
-				endTime: event.endTime,
-				isAllDay: event.isAllDay,
-				_eventStatus: event._eventStatus,
-				_eventCategory: event._eventCategory,
-				_eventType: event._eventType,
-				_eventVenue: event._eventVenue
-			});
-		});
-		
-		return response.json(eventViewModel).status(200).end();
+		return response.json(events).status(200).end();
 	});
 });
 
@@ -84,8 +61,9 @@ router.get('/get_event_speakers', function (request, response) {
  * Http Method		: GET
  * Created By		: Sherman Chen
  * Date Created		: 2016-09-29 09:06pm
+ * Date Modified	: 2016-09-29
  */
-router.get('/assign_speakers', function (request, response) {
+router.get('/assign_speaker', function (request, response) {
 	var eventId = request.query.event,
 		speakerId = request.query.speaker,
 		modeType = request.query.mode;
@@ -130,17 +108,22 @@ router.get('/assign_speakers', function (request, response) {
 /**
  * parseDate() will accept a date value in string format and then convert it into an ISO standard format.
  * @param dateVal A selected date value passed from the UI.
+ * @param timeVal (Optional value)
  * @returns {string} The final date value in ISO format.
  */
-function parseDate(dateVal) {
+function parseDate(dateVal, timeVal = '') {
 	var day = dateVal.substr(0, 2);
 	var month = dateVal.substr(3, 2);
 	var year = dateVal.substr(6, 4);
 	
-	//var hour = dateVal.substr(11,2);
-	//var min = dateVal.substr(14,2);
+	var finalDateVal = '';
 	
-	return year + '-' + month + '-' + day + 'T12:00:00';
+	if (timeVal == '')
+		finalDateVal = year + '/' + month + '/' + day;
+	else
+		finalDateVal = year + '/' + month + '/' + day + ' ' + timeVal;
+	
+	return finalDateVal;
 }
 
 
@@ -155,16 +138,12 @@ router.get('/get_list_selection', function(request, response) {
  * Http Method		: POST
  * Created By		: Sherman Chen
  * Date Created		: 2016-09-07 7:28pm
+ * Date Updated		: 2016-09-30 02:55pm
+ * ===============================================================================================================
+ * Update Log:
+ * (1) Updated the date values to use the parseDate() method, and then passing in the time value if its not an all day event.
  */
 router.post('/add_event', function (request, response) {
-	var startDateISO = parseDate(request.body.startDate.toString());
-	var endDateISO = parseDate(request.body.endDate.toString());
-	
-	console.log('Start Date: ' + startDateISO + ', End Date: ' + endDateISO);
-	console.log('Start Time: ' + request.body.startTime + ', End Time: ' + request.body.endTime);
-	
-	//var finalStartDate = new Date(startDateISO);
-	//var finalEndDate = new Date(endDateISO);
 	
 	var isAllDay = false;
 	
@@ -174,8 +153,10 @@ router.post('/add_event', function (request, response) {
 	var event = new Event({
 		eventName		: request.body.eventName,
 		eventDesc		: request.body.eventDesc,
-		startDate		: new Date(startDateISO),
-		endDate			: new Date(endDateISO),
+		startDate		: new Date(parseDate(request.body.startDate)),
+		endDate			: new Date(parseDate(request.body.endDate)),
+		startTime		: '12:00 AM',
+		endTime			: '12:00 AM',
 		isAllDay		: isAllDay,
 		_eventStatus	: request.body.eventStatus,
 		_eventType		: request.body.eventType,
@@ -186,15 +167,20 @@ router.post('/add_event', function (request, response) {
 	if (!isAllDay) {
 		event.startTime = request.body.startTime;
 		event.endTime = request.body.endTime;
+		event.startDate = new Date(parseDate(request.body.startDate, request.body.startTime));
+		event.endDate = new Date(parseDate(request.body.endDate, request.body.endTime));
 	}
 	
 	event.save(function(error) {
+		
 		if (error) {
 			if (request.query.mobile)
 				return response.json({Error: error.toString(), ErrorStack: error.stack.toString()}).status(500).end();
 			else
 				response.redirect('/events/create/?error=1');
 		}
+		
+		console.log('Event: ' + JSON.stringify(event));
 		
 		EventType.findOne({_id: request.body.eventType}, function(retEventTypeError, eventType) {
 			eventType._events.push(event);
