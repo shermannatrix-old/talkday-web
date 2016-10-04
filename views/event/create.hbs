@@ -12,7 +12,7 @@
 	{{/if}}
 
 	<div style="width: 100%; text-align: left; margin: 15px 0px;">
-		<a href="/events/list" class="btn">&larr;&nbsp;Back to list view</a>
+		<a href="/events/dashboard" class="btn">&larr;&nbsp;Back to list view</a>
 	</div>
 
 	<div class="form-group">
@@ -26,14 +26,12 @@
 	</div>
 
 	<div class="form-group">
-		<span class="label-short" style="width: 200px;padding-right: 10px;">Start Date:</span>&nbsp;<input name="startDate" id="startDate" style="display: inline-block; width: 20%;" />&nbsp;
-		<span class="label-short">Start Time:</span>&nbsp;<input name="startTime" id="startTime" style="display: inline-block; width: 15%; margin-right: 20px;" />&nbsp;
+		<span class="label-short" style="width: 200px;padding-right: 10px;">Start Date:</span>&nbsp;<input name="startDate" id="startDate" style="display: inline-block; width: 30%;" />&nbsp;
 		<input type="checkbox" class="k-input" name="isAllDay" id="isAllDay" style="display: inline-block;" />&nbsp;<span class="label-short">All Day Event?</span>
 	</div>
 
 	<div class="form-group">
-		<span class="label-short" style="width: 200px; padding-right: 15px;">End Date:</span>&nbsp;<input name="endDate" id="endDate" style="display: inline-block; width: 20%;" />&nbsp;
-		<span class="label-short" style="width: 188px; padding-right: 7px;">End Time:</span>&nbsp;<input name="endTime" id="endTime" style="display: inline-block; width: 15%;" />
+		<span class="label-short" style="width: 200px; padding-right: 15px;">End Date:</span>&nbsp;<input name="endDate" id="endDate" style="display: inline-block; width: 30%;" />
 	</div>
 
 	<div class="form-group">
@@ -72,31 +70,60 @@
 </script>
 
 <script language="JavaScript">
-	$('#startDate').kendoDatePicker({
-		value: new Date(),
-		format: "dd-MM-yyyy"
-	});
-	$('#startTime').kendoTimePicker();
+	var today = new Date();
+    var currMinutes = today.getMinutes();
+    var currHour = today.getHours();
+    var currDate = today.getDate();
 
-	$('#endDate').kendoDatePicker({
-		value: new Date(),
-		format: "dd-MM-yyyy"
-	});
-	$('#endTime').kendoTimePicker();
+    if (currMinutes > 30)
+    	currHour = currHour + 1;
+
+    if (currHour >= 18 || currHour <= 6) {
+        currDate = currDate + 1;
+        currHour = 7;
+    }
+
+    $('#startDate').kendoDateTimePicker({
+    	min: new Date(today.getFullYear(), today.getMonth(), currDate, currHour, 0, 0),
+    	value: new Date(today.getFullYear(), today.getMonth(), currDate, currHour, 0, 0),
+    	format: "dd/MM/yyyy HH:mm",
+    	interval: 60
+    });
+
+    $('#endDate').kendoDateTimePicker({
+    	min: new Date(today.getFullYear(), today.getMonth(), currDate, currHour + 1, 0, 0),
+    	value: new Date(today.getFullYear(), today.getMonth(), currDate, currHour + 1, 0, 0),
+    	format: "dd/MM/yyyy HH:mm",
+    	interval: 60
+    });
 
 	$('#isAllDay').click(function() {
 		console.log($('#isAllDay').is(':checked'));
 
-		var tpStartTime = $('#startTime').data("kendoTimePicker");
-		var tpEndTime = $('#endTime').data("kendoTimePicker");
+		currHour = today.getHours();
+
+		var dtpStartDate = $('#startDate').data("kendoDateTimePicker");
+		var dtpEndDate = $('#endDate').data("kendoDateTimePicker");
 
 		if ($(this).is(':checked')) {
-			tpStartTime.enable(false);
-			tpEndTime.enable(false);
+		    if (currHour >= 18) {
+		        dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1, 12, 0, 0));
+                dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1, 12, 0, 0));
+		    }
+		    else {
+			    dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0, 0));
+			    dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0, 0));
+			}
 		}
 		else {
-			tpStartTime.enable(true);
-			tpEndTime.enable(true);
+		    if (currHour >= 18 || currHour <= 6) {
+			    dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate()+1, 7, 0, 0));
+                dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate()+1, 8, 0, 0));
+            }
+            else {
+                dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), currHour, 0, 0));
+                dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), currHour + 1, 0, 0));
+            }
 		}
 	});
 

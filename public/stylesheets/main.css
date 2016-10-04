@@ -104,6 +104,6 @@ h1 {
 	letter-spacing: 0.5px;
 }
 
-.k-event, .k-event-inverse {
-	border-radius: 5px;
+.control-buttons {
+	padding: 8px 16px;
 }

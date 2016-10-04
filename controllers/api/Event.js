@@ -14,6 +14,7 @@
 var express = require('express');
 var router = express.Router();
 var config = require('./../../config/config');
+var dateFormat = require('dateformat');
 var Event = require('./../../models/Event');
 var EventType = require('./../../models/EventType');
 var EventCategory = require('./../../models/EventCategory');
@@ -108,22 +109,17 @@ router.get('/assign_speaker', function (request, response) {
 /**
  * parseDate() will accept a date value in string format and then convert it into an ISO standard format.
  * @param dateVal A selected date value passed from the UI.
- * @param timeVal (Optional value)
  * @returns {string} The final date value in ISO format.
  */
-function parseDate(dateVal, timeVal = '') {
+function parseDate(dateVal) {
 	var day = dateVal.substr(0, 2);
 	var month = dateVal.substr(3, 2);
 	var year = dateVal.substr(6, 4);
 	
-	var finalDateVal = '';
+	var hour = dateVal.substr(11,2);
+	var min = dateVal.substr(14,2);
 	
-	if (timeVal == '')
-		finalDateVal = year + '/' + month + '/' + day;
-	else
-		finalDateVal = year + '/' + month + '/' + day + ' ' + timeVal;
-	
-	return finalDateVal;
+	return year + '-' + month + '-' + day + 'T' + hour + ':' + min + ':00';
 }
 
 
@@ -144,6 +140,13 @@ router.get('/get_list_selection', function(request, response) {
  * (1) Updated the date values to use the parseDate() method, and then passing in the time value if its not an all day event.
  */
 router.post('/add_event', function (request, response) {
+	var startDateISO = parseDate(request.body.startDate.toString());
+	var endDateISO = parseDate(request.body.endDate.toString());
+	
+	console.log('Start Date: ' + startDateISO + ', End Date: ' + endDateISO);
+	
+	var finalStartDate = new Date(startDateISO);
+	var finalEndDate = new Date(endDateISO);
 	
 	var isAllDay = false;
 	
@@ -153,8 +156,8 @@ router.post('/add_event', function (request, response) {
 	var event = new Event({
 		eventName		: request.body.eventName,
 		eventDesc		: request.body.eventDesc,
-		startDate		: new Date(parseDate(request.body.startDate)),
-		endDate			: new Date(parseDate(request.body.endDate)),
+		startDate		: new Date(finalStartDate.setHours(finalStartDate.getHours())),
+		endDate			: new Date(finalEndDate.setHours(finalEndDate.getHours())),
 		startTime		: '12:00 AM',
 		endTime			: '12:00 AM',
 		isAllDay		: isAllDay,
@@ -165,10 +168,8 @@ router.post('/add_event', function (request, response) {
 	});
 	
 	if (!isAllDay) {
-		event.startTime = request.body.startTime;
-		event.endTime = request.body.endTime;
-		event.startDate = new Date(parseDate(request.body.startDate, request.body.startTime));
-		event.endDate = new Date(parseDate(request.body.endDate, request.body.endTime));
+		event.startTime = dateFormat(finalStartDate.setHours(finalStartDate.getHours() + 8), 'GMT:h:MM TT');
+		event.endTime = dateFormat(finalEndDate.setHours(finalStartDate.getHours() + 8), 'GMT:h:MM TT');
 	}
 	
 	event.save(function(error) {
@@ -206,6 +207,70 @@ router.post('/add_event', function (request, response) {
 			return response.json(event).status(201).end();
 		else
 			response.redirect('/events/create/?created=1&event=' + event.eventName);
+	});
+});
+
+/**
+ * /update_event - the most basic update event method at this point in time.
+ * Http Method		: POST
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-10-04 11:05pm
+ * ===============================================================================================================
+ * Notes:
+ * (1) Will need to add more codes to handle the various related documents later.
+ */
+router.post('/update_event', function (request, response) {
+	var eventId = request.query.id,
+		modeType = request.query.mode;
+	
+	var startDateISO = parseDate(request.body.startDate.toString());
+	var endDateISO = parseDate(request.body.endDate.toString());
+	
+	console.log('Start Date: ' + startDateISO + ', End Date: ' + endDateISO);
+	
+	var finalStartDate = new Date(startDateISO);
+	var finalEndDate = new Date(endDateISO);
+	
+	var isAllDay = false;
+	
+	if (request.body.isAllDay)
+		isAllDay = true;
+	
+	var updateData = {
+		eventName		: request.body.eventName,
+		eventDesc		: request.body.eventDesc,
+		startDate		: new Date(finalStartDate.setHours(finalStartDate.getHours())),
+		endDate			: new Date(finalEndDate.setHours(finalEndDate.getHours())),
+		startTime		: '12:00 AM',
+		endTime			: '12:00 AM',
+		isAllDay		: isAllDay,
+		_eventStatus	: request.body.eventStatus,
+		_eventType		: request.body.eventType,
+		_eventCategory	: request.body.eventCategory,
+		_eventVenue		: request.body.eventVenue,
+	};
+	
+	if (!isAllDay) {
+		updateData.startTime = dateFormat(finalStartDate, 'GMT:h:MM TT');
+		updateData.endTime = dateFormat(finalEndDate, 'GMT:h:MM TT');
+	}
+	
+	var query = {
+		_id: request.query.id
+	};
+	
+	Event.findOneAndUpdate(query, updateData, {new: true}, function (error, updatedEvent) {
+		if (error) {
+			if (modeType != 'cms')
+				return response.json({Error: error.toString(), ErrorStack: error.stack.toString()}).status(500).end();
+			else
+				response.redirect('/events/edit/?id=' + eventId + '&error=1');
+		}
+		
+		if (modeType != 'cms')
+			return response.json(updatedEvent).status(200).end();
+		else
+			response.redirect('/events/edit/?id=' + eventId + '&updated=1');
 	});
 });
 

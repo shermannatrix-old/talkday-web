@@ -21,6 +21,10 @@
 			<h3>Events Schedule</h3>
 
 			<div class="buttons-panel">
+				<a id="add-event-btn2" class="control-buttons form-btn k-primary" href="/events/create" type="button">Add Event</a>&nbsp;
+			</div>
+
+			<div class="buttons-panel">
 				<label for="eventCategories" style="text-align: left; margin-right: 15px;">Select a Category:</label>
 				<select id="eventCategories" name="eventCategories" style="display: inline-block; width: 300px;">
 				</select>
@@ -52,10 +56,7 @@
 
 <script type="text/x-kendo-template" id="scheduler-event-template">
 	<div>
-		<p style="font-size: 14px; font-weight: bold; width: 100%; padding: 5px; text-wrap: normal;">#: title #</p>
-		<p style="font-size: 12px; width: 100%; padding: 5px;">
-			#: startTime# to #: endTime#
-		</p>
+		<p style="font-size: 14px; font-weight: bold; width: 100%; margin: 5px; text-wrap: normal;">#: title #</p>
 		<p style="font-size: 12px; width: 100%; padding: 5px;">#: eventType #</p>
 	</div>
 </script>
@@ -69,10 +70,9 @@
 		}
 	});
 
-
 	$('#grid-events').kendoGrid({
 		dataSource: {
-			type: "json",
+			//type: "json",
 			transport: {
 				read: "{{baseUri}}/api/events/get_all_events"
 			},
@@ -138,22 +138,21 @@
 
 	var today = new Date();
 	var startTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7,0,0);
-	var endTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 24,0,0);
+	var endTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23,0,0);
+
+	$('#scheduler-wrapper').html('<div id="scheduler"></div>');
+
+	$.get('{{baseUri}}/api/eventcategories/get_list_selection', function(categories) {
+		defaultCategory = categories[0]._id;
+	});
 
 	$(document).ready(function() {
-
-		$('#scheduler-wrapper').html('<div id="scheduler"></div>');
-
-		$.get('{{baseUri}}/api/eventcategories/get_list_selection', function(categories) {
-			defaultCategory = categories[0]._id;
-		});
-
 		$('#eventCategories').kendoDropDownList({
 			index: 0,
 			dataTextField: "categoryName",
 			dataValueField: "_id",
 			dataSource: {
-				type: "json", // specifies data protocol
+				//type: "json", // specifies data protocol
 				transport: {
 					read: "{{baseUri}}/api/eventcategories/get_list_selection"
 				}
@@ -174,7 +173,6 @@
 		});
 
 		loadScheduler();
-
 	});
 
 	function loadScheduler() {
@@ -195,6 +193,7 @@
 
 			$('#scheduler').kendoScheduler({
 				date: new Date(),
+				timezone: "GMT0",
 				startTime: startTime,
 				endTime: endTime,
 				height: 700,
@@ -212,8 +211,8 @@
 					batch: false, // Enable batch updates
 					transport: {
 						read: {
-							url: "{{baseUri}}/api/events/get_all_events",
-							dataType: "json"
+							url: "{{baseUri}}/api/events/get_all_events"
+							//dataType: "json"
 						}
 					},
 					schema: {
@@ -228,9 +227,11 @@
 								start		: { type: "date", from: "startDate" },
 								end			: { type: "date", from: "endDate" },
 								startTime	: { type: "string", from: "startTime" },
-								endTime		: { type: "string", from: "endTime" },
+								endTime		: { type: "date", from: "endDate" },
+								timeSlotEnd	: { type: "string", from: "endTime" },
 								isAllDay	: { type: "boolean", from: "isAllDay" },
-								eventType	: { type: "string", from: "_eventType.typeName" }
+								eventType	: { type: "string", from: "_eventType.typeName" },
+								typeId		: { type: "string", from: "_eventType._id"},
 							}
 						}
 					}

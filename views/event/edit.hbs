@@ -1,0 +1,187 @@
+<form action="/api/events/update_event/?id={{event._id}}&mode=cms" method="post" role="form" class="properties-form">
+	{{#if show_error}}
+		<div class="form-group error-box">
+			An error occured while trying to create the record.<br />Please contact the administrator for more information.
+		</div>
+	{{/if}}
+
+	{{#if show_info}}
+		<div class="form-group info-box">
+			The event record: {{event_name}} has been added.
+		</div>
+	{{/if}}
+
+	<div style="width: 100%; text-align: left; margin: 15px 0px;">
+		<a href="/events/dashboard" class="btn">&larr;&nbsp;Back to list view</a>
+	</div>
+
+	<div class="form-group">
+		<label for="eventName" class="label-full">Event name:</label>
+		<input class="k-textbox" type="text" name="eventName" id="eventName" value="{{event.eventName}}" autofocus required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="eventDesc" class="label-full">Event Description:</label>
+		<textarea id="eventDesc" name="eventDesc" class="k-textbox" required aria-required style="display: inline-block; width: 100%; border-radius: 5px;" rows="8">{{event.eventDesc}}</textarea>
+	</div>
+
+	<div class="form-group">
+		<span class="label-short" style="width: 200px;padding-right: 10px;">Start Date:</span>&nbsp;<input name="startDate" id="startDate" style="display: inline-block; width: 30%;" />&nbsp;
+		<input type="checkbox" class="k-input" name="isAllDay" id="isAllDay" style="display: inline-block;" {{#if event.isAllDay}} checked {{/if}} />&nbsp;<span class="label-short">All Day Event?</span>
+	</div>
+
+	<div class="form-group">
+		<span class="label-short" style="width: 200px; padding-right: 15px;">End Date:</span>&nbsp;<input name="endDate" id="endDate" style="display: inline-block; width: 30%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="eventType" class="label-full">Event Type:</label>
+		<input name="eventType" id="eventType" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="eventCategory" class="label-full">Event Category:</label>
+		<input name="eventCategory" id="eventCategory" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="eventVenue" class="label-full">Event Venue:</label>
+		<input name="eventVenue" id="eventVenue" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="eventStatus" class="label-full">Event Status:</label>
+		<input name="eventStatus" id="eventStatus" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div style="margin-top: 25px;">
+		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+		<a class="btn" href="/eventcategories/list">Cancel</a>
+	</div>
+</form>
+
+<script id="valueTmpl" type="text/x-kendo-template">
+	<strong>#: venueName#</strong> (#: buildingName#)
+</script>
+
+<script id="listTmpl" type="text/x-kendo-template">
+	<span class="venue-name-text">#: venueName#</span><br />
+	#: buildingNo# #: streetAddr#, #: unitNo#<br />#: buildingName#<br /> Singapore #: postalCode#
+</script>
+
+<script language="JavaScript">
+	var today = new Date();
+	var currMinutes = today.getMinutes();
+	var currHour = today.getHours();
+	var currDate = today.getDate();
+
+	if (currMinutes > 30)
+		currHour = currHour + 1;
+
+	if (currHour >= 18 || currHour <= 6) {
+		currDate = currDate + 1;
+		currHour = 7;
+	}
+
+	var startDate = new Date('{{event.startDate}}');
+	var endDate = new Date('{{event.endDate}}');
+
+	var finalStartDate = new Date(startDate.setHours(startDate.getHours() - 8));
+	var finalEndDate = new Date(endDate.setHours(endDate.getHours() - 8));
+
+	$('#startDate').kendoDateTimePicker({
+		min: new Date(today.getFullYear(), today.getMonth(), currDate, currHour, 0, 0),
+		value: finalStartDate,
+		format: "dd/MM/yyyy HH:mm",
+		interval: 60
+	});
+
+	$('#endDate').kendoDateTimePicker({
+		min: new Date(today.getFullYear(), today.getMonth(), currDate, currHour + 1, 0, 0),
+		value: finalEndDate,
+		format: "dd/MM/yyyy HH:mm",
+		interval: 60
+	});
+
+	$('#isAllDay').click(function() {
+		console.log($('#isAllDay').is(':checked'));
+
+		currHour = today.getHours();
+
+		var dtpStartDate = $('#startDate').data("kendoDateTimePicker");
+		var dtpEndDate = $('#endDate').data("kendoDateTimePicker");
+
+		if ($(this).is(':checked')) {
+			if (currHour >= 18) {
+				dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1, 12, 0, 0));
+				dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1, 12, 0, 0));
+			}
+			else {
+				dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0, 0));
+				dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0, 0));
+			}
+		}
+		else {
+			if (currHour >= 18 || currHour <= 6) {
+				dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate()+1, 7, 0, 0));
+				dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate()+1, 8, 0, 0));
+			}
+			else {
+				dtpStartDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), currHour, 0, 0));
+				dtpEndDate.value(new Date(today.getFullYear(), today.getMonth(), today.getDate(), currHour + 1, 0, 0));
+			}
+		}
+	});
+
+	$('#eventType').kendoDropDownList({
+		dataTextField: "typeName",
+		dataValueField: "_id",
+		dataSource: {
+			type: "json", // specifies data protocol
+			transport: {
+				read: "{{baseUri}}/api/eventtypes/get_list_selection"
+			}
+		},
+		value: "{{event._eventType._id}}"
+	});
+
+	$('#eventCategory').kendoDropDownList({
+		dataTextField: "categoryName",
+		dataValueField: "_id",
+		dataSource: {
+			type: "json", // specifies data protocol
+			transport: {
+				read: "{{baseUri}}/api/eventcategories/get_list_selection"
+			}
+		},
+		value: "{{event._eventCategory._id}}"
+	});
+
+	$('#eventVenue').kendoDropDownList({
+		template: $('#listTmpl').html(),
+		valueTemplate: $('#valueTmpl').html(),
+		dataTextField: "venueName",
+		dataValueField: "_id",
+		dataSource: {
+			type: "json", // specifies data protocol
+			transport: {
+				read: "{{baseUri}}/api/eventvenues/get_list_selection"
+			}
+		},
+		value: "{{event._eventVenue._id}}"
+	});
+
+	$('#eventStatus').kendoDropDownList({
+		dataTextField: "statusName",
+		dataValueField: "_id",
+		dataSource: {
+			type: "json", // specifies data protocol
+			transport: {
+				read: "{{baseUri}}/api/eventstatuses/get_list_selection"
+			}
+		},
+		value: "{{event._eventStatus._id}}"
+	});
+
+	$('#submit-button').kendoButton();
+</script>
