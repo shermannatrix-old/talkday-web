@@ -2,11 +2,12 @@
  * The Event.js controller will contain methods for creating new Events and also retrieving those values for listing purposes.
  * Created by		: Sherman Chen
  * Date Created		: 2016-09-07 7:28pm
- * Date Modified	: 2016-09-29 09:07pm
+ * Date Modified	: 2016-10-06 05:39pm
  * ===============================================================================================================
  * Update Log:
- * (1) Added the API method /get_event_speakers
- * (2) Added the API method /assign_speakers
+ * (1) Remove the API method /get_event_speakers
+ * (2) Modified the API method /assign_speakers
+ * (3) Added the API method /remove_event_speaker
  */
 
 'use strict';
@@ -34,26 +35,8 @@ var UserEventRsvp = require('./../../models/UserEventRsvp');
  * (1) Updated the Web API name to /get_all_events
  */
 router.get('/get_all_events', function (request, response) {
-	Event.find({}).populate('_eventType _eventCategory _eventStatus _eventVenue').exec(function (error, events) {
+	Event.find({}).populate('_eventType _eventCategory _eventStatus _eventVenue _speakers').exec(function (error, events) {
 		return response.json(events).status(200).end();
-	});
-});
-
-/**
- * /get_event_speakers?event=[eventId] - this API method will retrieve a list of all the speakers speaking at the event.
- * Http Method		: GET
- * Created By		: Sherman Chen
- * Date Created		: 2016-09-29 08:54pm
- */
-router.get('/get_event_speakers', function (request, response) {
-	var eventId = request.query.event;
-	
-	Event.find({_id: eventId}).populate('_speakers').exec(function(error, eventDetails) {
-		if (error) {
-				return response.json({ErrorDetails: error.toString(), ErrorStack: error.stack.toString()}).status(500).end();
-		}
-		
-		return response.json(eventDetails._speakers).status(200).end();
 	});
 });
 
@@ -62,7 +45,10 @@ router.get('/get_event_speakers', function (request, response) {
  * Http Method		: GET
  * Created By		: Sherman Chen
  * Date Created		: 2016-09-29 09:06pm
- * Date Modified	: 2016-09-29
+ * Date Modified	: 2016-09-29 02:06pm
+ * ===============================================================================================================
+ * Update Log:
+ * (1) Replace the invalid array methods containsAny() and instead use forEach() to loop through.
  */
 router.get('/assign_speaker', function (request, response) {
 	var eventId = request.query.event,
@@ -77,10 +63,22 @@ router.get('/assign_speaker', function (request, response) {
 				return response.json ( { ErrorDetails: error.toString (), ErrorStack: error.stack.toString () } ).status ( 500 ).end ();
 		}
 		// Check to see if the event already has the speaker. If no, then add the speaker to the Event.
-		if ( !event._speakers.contains ( speakerId ) ) {
-			event._speakers.push ( speakerId );
-			event.save ();
-		}
+		var i = 0;
+		
+		EventSpeaker.findOne({_id: speakerId}, function(getSpeakerError, speakerDetails) {
+			event._speakers.forEach(function(speaker, index) {
+				
+				if (speakerDetails != speaker)
+					i++;
+			});
+			
+			if (event._speakers.length == 0 || i == event._speakers.length) {
+				event._speakers.push ( speakerDetails );
+				event.save ();
+			}
+		});
+		
+		i = 0;
 		
 		EventSpeaker.findOne({_id: speakerId}).populate('_events').exec(function (getSpeakerErr, speaker) {
 			if (getSpeakerErr) {
@@ -91,19 +89,57 @@ router.get('/assign_speaker', function (request, response) {
 			}
 			
 			// Likewise, check to see if the Speaker is already speaking at this Event. If not, add the Event to the Speaker's _events collection.
-			if (!speaker._events.contains(eventId)) {
+			speaker._events.forEach(function(eventDetails, index) {
+				if (event != eventDetails)
+					i++;
+			});
+			
+			if (speaker._events.length == 0 || i == speaker._events.length) {
 				speaker._events.push ( event );
 				speaker.save ();
 			}
 			
 			if (modeType == 'cms')
 			{
-				response.redirect('/events/view_speakers/?event=' + eventId + '&updated=1');
+				response.redirect('/events/edit/?id=' + eventId + '&updated=1');
 			}
 			else
 				return response.json({Event: event, Speaker: speaker}).status(200).end();
 		});
 	});
+});
+
+/**
+ * /remove_event_speaker/?speaker=[speakerId]&event=[eventId] - this API method will remove the specified speaker from the specified event.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-10-06 03:16pm
+ */
+router.get('/remove_event_speaker', function (request, response) {
+	var eventId = request.query.event,
+		speakerId = request.query.speaker,
+		modeType = request.query.mode;
+	
+	Event.findOne({_id: eventId}).populate('_speakers').exec(function (getEventsError, eventDetails) {
+		eventDetails._speakers.forEach(function (speakerDetails, index) {
+			if (speakerDetails._id.toString() === speakerId) {
+				eventDetails._speakers.splice(index, 1);
+				eventDetails.save();
+			}
+		});
+	});
+	
+	EventSpeaker.findOne({_id: speakerId}).populate('_events').exec(function (getSpeakersError, speakerDetails) {
+		speakerDetails._events.forEach(function (eventDetails, index) {
+			if (eventDetails._id.toString() === eventId) {
+				speakerDetails._events.splice(index, 1);
+				speakerDetails.save();
+			}
+		});
+	});
+	
+	if (modeType == 'cms')
+		response.redirect('/events/edit/?id=' + eventId + '&updated=1');
 });
 
 /**

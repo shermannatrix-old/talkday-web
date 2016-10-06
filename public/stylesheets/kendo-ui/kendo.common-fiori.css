@@ -7767,13 +7767,14 @@ div.k-scheduler-marquee:after {
 }
 .k-scheduler-edit-form .k-edit-form-container,
 .k-scheduler-timezones .k-edit-form-container {
-  width: 520px;
+  width: 700px;
 }
 .k-scheduler-edit-form .k-edit-label {
-  width: 17%;
+  width: 20%;
 }
 .k-scheduler-edit-form .k-edit-field {
-  width: 77%;
+  padding: 4px;
+  width: 74%;
 }
 .k-scheduler-edit-form .k-textbox[name="title"],
 .k-scheduler-edit-form textarea.k-textbox {

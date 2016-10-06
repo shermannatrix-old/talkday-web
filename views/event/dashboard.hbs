@@ -17,14 +17,14 @@
 				List View
 			</li>
 		</ul>
-		<div>
+		<div class="tab-content">
 			<h3>Events Schedule</h3>
 
-			<div class="buttons-panel">
+			<div class="tab-buttons-panel">
 				<a id="add-event-btn2" class="control-buttons form-btn k-primary" href="/events/create" type="button">Add Event</a>&nbsp;
 			</div>
 
-			<div class="buttons-panel">
+			<div class="tab-buttons-panel">
 				<label for="eventCategories" style="text-align: left; margin-right: 15px;">Select a Category:</label>
 				<select id="eventCategories" name="eventCategories" style="display: inline-block; width: 300px;">
 				</select>
@@ -35,7 +35,7 @@
 		<div>
 			<h3>List of Events</h3>
 
-			<div class="buttons-panel">
+			<div class="tab-buttons-panel">
 				<a id="add-event-btn" class="control-buttons form-btn k-primary" href="/events/create" type="button">Add Event</a>&nbsp;
 			</div>
 
@@ -58,10 +58,15 @@
 	<div>
 		<p style="font-size: 14px; font-weight: bold; width: 100%; margin: 5px; text-wrap: normal;">#: title #</p>
 		<p style="font-size: 12px; width: 100%; padding: 5px;">#: eventType #</p>
+		<button onclick="editEvent('#: eventId#')" class="control-buttons edit-event-btn">Edit</button>
 	</div>
 </script>
 
 <script>
+	function editEvent(id) {
+		window.location.href='/events/edit/?id=' + id + '&mode=cms';
+	}
+
 	$('#tabstrip').kendoTabStrip({
 		animation:  {
 			open: {
@@ -169,7 +174,8 @@
 				$('#scheduler-wrapper').html('<div id="scheduler"></div>');
 
 				loadScheduler();
-			}
+			},
+			height: 250
 		});
 
 		loadScheduler();
@@ -178,17 +184,11 @@
 	function loadScheduler() {
 		$.get('{{baseUri}}/api/eventcategories/get_list_selection', function(data) {
 			data.forEach(function (category) {
-				if ($('#eventCategories').val() === category._id) {
-					categories.push({
-						text: category.categoryName,
-						value: category._id,
-						color: category.colorCode
-					});
-
-					console.log('Category: ' + category.categoryName);
-				}
-
-				//console.log('{text: ' + category.categoryName + ', value: ' + category._id + '}');
+				categories.push({
+					text: category.categoryName,
+					value: category._id,
+					color: category.colorCode
+				});
 			});
 
 			$('#scheduler').kendoScheduler({
@@ -196,13 +196,14 @@
 				timezone: "GMT0",
 				startTime: startTime,
 				endTime: endTime,
-				height: 700,
+				height: 1000,
 				views: [
 					{ type: "day", showWorkHours: false },
 					{ type: "week", selected: true, showWorkHours: false },
 					"month",
 					"timeline"
 				],
+				editable: false,
 				eventTemplate: $('#scheduler-event-template').html(),
 				currentTimeMarker: {
 					updateInterval: 100
@@ -231,14 +232,13 @@
 								timeSlotEnd	: { type: "string", from: "endTime" },
 								isAllDay	: { type: "boolean", from: "isAllDay" },
 								eventType	: { type: "string", from: "_eventType.typeName" },
-								typeId		: { type: "string", from: "_eventType._id"},
+								typeId		: { from: "_eventType._id" },
+								statusId	: { from: "_eventStatus._id" },
+								venueId		: { from: "_eventVenue._id" },
+								colorCode	: { from: "_eventCategory.colorCode", type: "string" }
 							}
 						}
 					}
-				},
-				group: {
-					resources: ["Categories"],
-					orientation: "horizontal"
 				},
 				resources: [
 					{
@@ -247,7 +247,10 @@
 						dataSource: categories,
 						title: "Category"
 					}
-				]
+				],
+				edit: function(e) {
+					e.preventDefault();
+				}
 			});
 		});
 	}

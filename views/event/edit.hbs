@@ -56,7 +56,34 @@
 
 	<div style="margin-top: 25px;">
 		<button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
-		<a class="btn" href="/eventcategories/list">Cancel</a>
+		<a class="btn" href="/events/dashboard">Cancel</a>
+	</div>
+
+	<div class="grid-edit-view">
+		<div style="width: 100%;"><span>Available Speakers & Topics</span></div>
+		<div id="available-speakers-grid"></div>
+		<div style="width: 100%;"><span>Assigned Speakers & Topics</span></div>
+		<div id="assigned-speakers-grid"></div>
+	</div>
+
+	<div id="details">
+		<div class="speaker-photo-pane">
+			<img id="speaker-photo" style="width: 150px; height: auto; border: 1px solid #aaa;" />
+		</div>
+		<div class="speaker-details-pane">
+			<p style="width: 100%; display: inline-block; float: left;">
+				<label style="width: 17%; display: inline-block; float: left;">Name:</label>&nbsp;<span style="width: 81%; display: inline-block; float: left;" id="speakerName"></span>
+			</p>
+			<p style="width: 100%; display: inline-block; float: left;">
+				<label style="width: 17%; display: inline-block; float: left;">Bio:</label>&nbsp;<span style="width: 81%; display: inline-block; float: left;" id="speakerBio"></span>
+			</p>
+			<p style="width: 100%; display: inline-block; float: left;">
+				<label style="width: 17%; display: inline-block; float: left;">Topic:</label>&nbsp;<span style="width: 81%; display: inline-block; float: left;" id="topicTitle"></span>
+			</p>
+			<p style="width: 100%; display: inline-block; float: left;">
+				<label style="width: 17%; display: inline-block; float: left;">Description:</label>&nbsp;<span style="width: 81%; display: inline-block; float: left;" id="topicDesc"></span>
+			</p>
+		</div>
 	</div>
 </form>
 
@@ -183,5 +210,119 @@
 		value: "{{event._eventStatus._id}}"
 	});
 
+	$('#available-speakers-grid').kendoGrid({
+		dataSource: {
+			transport: {
+				read: "{{baseUri}}/api/eventspeakers/get_available_speakers/?event={{event._id}}"
+			},
+			pageSize: 20,
+			serverPaging: true
+		},
+		height: 550,
+		groupable: true,
+		sortable: true,
+		pageable: {
+			refresh: true,
+			pageSizes: true,
+			buttonCount: 5
+		},
+		columns: [
+			{
+				field: "speakerPhoto",
+				title: "Photo",
+				template: "<div style='text-align: center;'><img src='#: speakerPhoto#' style='width: 160px; height: auto;'/></div>",
+				headerTemplate: "<div style='text-align: center;'>Photo</div>",
+				width: 180
+			},
+			{
+				field: "speakerName",
+				title: "Speaker Details",
+				template: "<div style='text-align: left; width: 100%; display: inline-block; float: left;'><strong>#: topicTitle#</strong><br /><br />" +
+				"Topic Description:<br />#: topicDesc#<br /><br />Speaker: #: speakerName#" +
+				"<div style='width: 100%; text-align: right; margin-top: 8px;'>" +
+				"<a href='{{baseUri}}/api/events/assign_speaker/?event={{event._id}}&speaker=#: _id#&mode=cms' class='form-btn grid-buttons k-button'>Assign</a>" +
+				"&nbsp;<button class='form-btn grid-buttons k-button' type='button' onclick='viewSpeakerBio(\"#: _id#\")'>View Bio</button></div></div>"
+			}
+		],
+		noRecords: true,
+		messages: {
+			noRecords: "There is no data on current page"
+		}
+	});
+
+	/* For speakers that are already assigned to the Event in focus. */
+	$('#assigned-speakers-grid').kendoGrid({
+		dataSource: {
+			transport: {
+				read: "{{baseUri}}/api/eventspeakers/get_assigned_speakers/?event={{event._id}}"
+			},
+			pageSize: 20,
+			serverPaging: true
+		},
+		height: 550,
+		groupable: true,
+		sortable: true,
+		pageable: {
+			refresh: true,
+			pageSizes: true,
+			buttonCount: 5
+		},
+		columns: [
+			{
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/api/events/remove_event_speaker/?event={{event._id}}&speaker=#: _id#&mode=cms'>Remove Speaker</a></div>",
+				field: "_id",
+				title: " ",
+				width: 188
+			},
+			{
+				field: "speakerPhoto",
+				title: "Photo",
+				template: "<div style='text-align: center;'><img src='#: speakerPhoto#' style='width: 160px; height: auto;'/></div>",
+				headerTemplate: "<div style='text-align: center;'>Photo</div>",
+				width: 180
+			},
+			{
+				field: "topicTitle",
+				title: "Topic Details",
+				template: "<div style='text-align: left; width: 100%; display: inline-block; float: left;'><strong>#: topicTitle#</strong><br /><br />" +
+				"Topic Description:<br />#: topicDesc#<br /><br />Speaker: #: speakerName#" +
+				"<div style='width: 100%; text-align: right; margin-top: 8px;'>" +
+				"<button class='form-btn grid-buttons k-button' type='button' onclick='viewSpeakerBio(\"#: _id#\")'>View Bio</button></div></div>"
+			}
+		],
+		noRecords: true,
+		messages: {
+			noRecords: "There is no data on current page"
+		}
+	});
+
 	$('#submit-button').kendoButton();
+	$('.control-buttons').kendoButton();
+	$('.grid-buttons').kendoButton();
+
+	$("#details").kendoWindow({
+		title: "Speaker Details",
+		modal: true,
+		visible: false,
+		resizable: false,
+		width: 700
+	});
+
+	function viewSpeakerBio(speakerId) {
+		$.get('{{baseUri}}/api/eventspeakers/get_speaker_details/?id=' + speakerId, function(result) {
+
+			console.log(result);
+
+			var wnd = $('#details').data('kendoWindow');
+
+			$('#speaker-photo').attr('src', result.speakerPhoto);
+			$('#speakerName').html(result.speakerName);
+			$('#speakerBio').html(result.speakerBio);
+			$('#topicTitle').html(result.topicTitle);
+			$('#topicDesc').html(result.topicDesc);
+
+			wnd.center().open();
+		});
+
+	}
 </script>

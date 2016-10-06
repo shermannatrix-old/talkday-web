@@ -28,7 +28,7 @@ var eventSchema = new mongoose.Schema({
 	_eventType		: { type: mongoose.Schema.Types.ObjectId, ref: 'EventType' },
 	_eventCategory	: { type: mongoose.Schema.Types.ObjectId, ref: 'EventCategory' },
 	_eventVenue		: { type: mongoose.Schema.Types.ObjectId, ref: 'EventVenue' },
-	_speakers		: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Speaker' } ],			// Some events are known to have multiple speakers
+	_speakers		: [ { type: mongoose.Schema.Types.ObjectId, ref: 'EventSpeaker' } ],			// Some events are known to have multiple speakers
 	_feedbacks		: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' } ],		// All feedbacks submitted that are related to the event.
 	_userEventRsvps	: [ { type: mongoose.Schema.Types.ObjectId, ref: 'UserEventRsvp' } ]		// related to the number of users who have RSVPed for each event.
 });

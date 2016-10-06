@@ -60,7 +60,7 @@ router.get('/create', function (request, response) {
  */
 router.get('/edit', function(request, response) {
 	if (request.cookies.fullname) {
-		Event.findOne({_id: request.query.id}, function (error, event) {
+		Event.findOne({_id: request.query.id}).populate('_eventType _eventCategory _eventStatus _eventVenue').exec( function (error, event) {
 			if (request.query.error) {
 				response.render('event/edit', {
 					title: 'Edit Event',
