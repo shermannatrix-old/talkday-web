@@ -251,9 +251,10 @@ router.post('/add_event', function (request, response) {
  * Http Method		: POST
  * Created By		: Sherman Chen
  * Date Created		: 2016-10-04 11:05pm
+ * Date Modified	: 2016-10-06 12:36pm
  * ===============================================================================================================
- * Notes:
- * (1) Will need to add more codes to handle the various related documents later.
+ * Update Log:
+ * (1) Codes have to been added to handle the removing of the necessary relations when updating the Event Document
  */
 router.post('/update_event', function (request, response) {
 	var eventId = request.query.id,
@@ -295,6 +296,44 @@ router.post('/update_event', function (request, response) {
 		_id: request.query.id
 	};
 	
+	Event.findOne({_id: request.query.id}).populate('_eventStatus _eventType _eventCategory _eventVenue').exec( function (error, eventDetails) {
+		EventStatus.findOne({_id: eventDetails._eventStatus._id}).populate('_events').exec(function(getStatusError, eventStatus) {
+			eventStatus._events.forEach(function(event, index) {
+				if (event._id.toString() === eventDetails._id.toString())
+					eventStatus._events.splice(index, 1);
+			});
+			
+			eventStatus.save();
+		});
+		
+		EventVenue.findOne({_id: eventDetails._eventVenue._id}).populate('_events').exec(function(getVenueError, eventVenue) {
+			eventVenue._events.forEach(function(event, index) {
+				if (event._id.toString() === eventDetails._id.toString())
+					eventVenue._events.splice(index, 1);
+			});
+			
+			eventVenue.save();
+		});
+		
+		EventType.findOne({_id: eventDetails._eventType._id}).populate('_events').exec(function(getEventTypeError, eventType) {
+			eventType._events.forEach(function(event, index) {
+				if (event._id.toString() === eventDetails._id.toString())
+					eventType._events.splice(index, 1);
+			});
+			
+			eventType.save();
+		});
+		
+		EventCategory.findOne({_id: eventDetails._eventCategory._id}).populate('_events').exec(function(getEventCategoryError, eventCategory) {
+			eventCategory._events.forEach(function(event, index) {
+				if (event._id.toString() === eventDetails._id.toString())
+					eventCategory._events.splice(index, 1);
+			});
+			
+			eventCategory.save();
+		});
+	});
+	
 	Event.findOneAndUpdate(query, updateData, {new: true}, function (error, updatedEvent) {
 		if (error) {
 			if (modeType != 'cms')
@@ -302,6 +341,26 @@ router.post('/update_event', function (request, response) {
 			else
 				response.redirect('/events/edit/?id=' + eventId + '&error=1');
 		}
+		
+		EventType.findOne({_id: request.body.eventType}, function(retEventTypeError, eventType) {
+			eventType._events.push(updatedEvent);
+			eventType.save();
+		});
+		
+		EventCategory.findOne({_id: request.body.eventCategory}, function (retCategoryError, eventCategory) {
+			eventCategory._events.push(updatedEvent);
+			eventCategory.save();
+		});
+		
+		EventStatus.findOne({_id: request.body.eventStatus}, function (retStatusError, eventStatus) {
+			eventStatus._events.push(updatedEvent);
+			eventStatus.save();
+		});
+		
+		EventVenue.findOne({_id: request.body.eventVenue}, function (retVenueError, eventVenue) {
+			eventVenue._events.push(updatedEvent);
+			eventVenue.save();
+		});
 		
 		if (modeType != 'cms')
 			return response.json(updatedEvent).status(200).end();
