@@ -53,7 +53,9 @@ router.get('/get_user_details', function (request, response) {
 });
 
 router.get('/reset_password', function (request, response) {
-	User.findOne({ email: request.body.email }).populate('_userType').exec(function(error, userDetails) {
+	var modeType = request.query.mode;
+	
+	User.findOne({ _id: request.query.id }).populate('_userType').exec(function(error, userDetails) {
 		if ( error ) {
 			if ( request.query.mobile ) {
 				return response.json ( { Error: error.toString (), ErrorStack: JSON.stringify ( error.stack ) } ).status ( 500 ).end ();
@@ -69,10 +71,10 @@ router.get('/reset_password', function (request, response) {
 		// Notify user of the successful resetting of password.
 		// sendAutomatedEmail(user.firstName, user.lastName, user.email, user.password);
 		
-		if (request.query.mobile)
+		if (modeType != 'cms')
 			return response.json(userDetails).status(200).end();
 		else
-			response.redirect('/users/reset_success/?pwd=1');
+			response.redirect('/users/list/?resetpwd=1&username=' + userDetails.username);
 	});
 });
 

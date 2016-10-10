@@ -1,3 +1,9 @@
+{{#if show_info}}
+	<div class="form-group info-box">
+		Password of user: {{username}} has been successfully reset.
+	</div>
+{{/if}}
+
 <div class="buttons-panel">
 	<a id="manage-user" class="control-buttons form-btn" href="/users/list" disabled="disabled" type="button">Manage Users</a>
 	<a id="manage-user-type" class="control-buttons form-btn" href="/usertypes/list" type="button">Manage User Types</a>&nbsp;
@@ -40,7 +46,7 @@
 				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/userpostings/viewbyuser/?id=#: _id#'>View Posts</a>",
 				field: "_id",
 				title: " ",
-				width: 168
+				width: 128
 			},
 			{
 				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/feedbacks/userfeedbacks/?id=#: _id#'>View Feedbacks</a>",
@@ -64,7 +70,7 @@
 			},
 			{
 				headerTemplate: "<div style='text-align: center;'>Password</div>",
-				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button k-primary' style='padding: 4px 20px;' href='/api/users/reset_password/?id=#: _id#'>Reset</a></span>",
+				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button k-primary' style='padding: 4px 20px;' href='/api/users/reset_password/?id=#: _id#&mode=cms'>Reset</a></span>",
 				field: "_id",
 				title: "Password",
 				width: 110
@@ -91,7 +97,7 @@
 				template: "<div style='text-align: center;'><strong>#: _userType.typeName#</strong></span>",
 				field: "_userType.typeName",
 				title: "User Type",
-				width: 120
+				width: 150
 			}
 		]
 	});

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71be5689-637a-41ae-9779-2b05482b9f1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/edit.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/User.js" afterPath="$PROJECT_DIR$/controllers/api/User.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/routes/User.js" afterPath="$PROJECT_DIR$/controllers/routes/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/create.hbs" afterPath="$PROJECT_DIR$/views/user/create.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/list.hbs" afterPath="$PROJECT_DIR$/views/user/list.hbs" />
     </list>
     <ignored path="talkday-web.iws" />
@@ -30,51 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1266">
               <caret line="150" column="50" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="210" column="49" selection-start-line="210" selection-start-column="49" selection-end-line="210" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="79" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -135,10 +92,10 @@
         <option value="$PROJECT_DIR$/controllers/api/Event.js" />
         <option value="$PROJECT_DIR$/controllers/api/UserPost.js" />
         <option value="$PROJECT_DIR$/views/user/edit.hbs" />
-        <option value="$PROJECT_DIR$/controllers/routes/User.js" />
-        <option value="$PROJECT_DIR$/views/user/list.hbs" />
         <option value="$PROJECT_DIR$/views/user/create.hbs" />
+        <option value="$PROJECT_DIR$/controllers/routes/User.js" />
         <option value="$PROJECT_DIR$/controllers/api/User.js" />
+        <option value="$PROJECT_DIR$/views/user/list.hbs" />
       </list>
     </option>
   </component>
@@ -231,20 +188,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="talkday-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,12 +377,12 @@
       <workItem from="1475811516595" duration="1944000" />
       <workItem from="1475827141494" duration="1783000" />
       <workItem from="1475829886831" duration="210000" />
-      <workItem from="1476067135095" duration="3448000" />
+      <workItem from="1476067135095" duration="4071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190401000" />
+    <option name="totallyTimeSpent" value="191024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="0" />
@@ -752,14 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user/edit.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2263">
@@ -821,34 +756,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/create.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        <state relative-caret-position="217">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/list.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="52" column="80" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+        <state relative-caret-position="93">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
           <folding>
-            <marker date="1476069379000" expanded="true" signature="886:905" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="988:994" ph=" " />
-            <marker date="1476069379000" expanded="true" signature="1194:1213" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1405:1424" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1626:1645" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1688:1707" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1721:1747" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1886:1905" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="1951:1970" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2099:2118" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2164:2183" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2244:2262" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2615:2634" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2681:2700" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2828:2847" ph="..." />
-            <marker date="1476069379000" expanded="true" signature="2894:2913" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1018:1037" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1120:1126" ph=" " />
+            <marker date="1476074827000" expanded="true" signature="1326:1345" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1537:1556" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1758:1777" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1820:1839" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="1853:1879" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2018:2037" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2083:2102" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2231:2250" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2296:2315" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2376:2394" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2756:2775" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2822:2841" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="2969:2988" ph="..." />
+            <marker date="1476074827000" expanded="true" signature="3035:3054" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/routes/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -856,14 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1266">
           <caret line="150" column="50" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="210" column="49" selection-start-line="210" selection-start-column="49" selection-end-line="210" selection-end-column="49" />
           <folding />
         </state>
       </provider>

@@ -30,6 +30,15 @@ router.get('/list', function (request, response) {
 				fullname: request.cookies.fullname
 			} );
 		}
+		else if (request.query.resetpwd) {
+			response.render ( 'user/list', {
+				title: 'User Listing',
+				baseUri: config.baseUri,
+				show_info: 'Password Reset.',
+				username: request.query.username,
+				fullname: request.cookies.fullname
+			} );
+		}
 		else {
 			response.render ( 'user/list', {
 				title: 'User Listing',
