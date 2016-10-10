@@ -76,4 +76,42 @@ router.get('/create', function (request, response) {
 	}
 });
 
+router.get('/edit', function (request, response) {
+	if (request.cookies.fullname) {
+		User.findOne({_id: request.query.id}).populate('_userType').exec(function(error, userDetails) {
+			if (request.query.error) {
+				response.render('user/edit', {
+					title: 'Edit User',
+					baseUri: config.baseUri,
+					fullname: request.cookies.fullname,
+					show_error: 'Error occured',
+					user: userDetails
+				});
+			}
+			else if (request.query.updated) {
+				response.render('user/edit', {
+					title: 'Edit User',
+					baseUri: config.baseUri,
+					fullname: request.cookies.fullname,
+					show_info: 'Record Updated',
+					user: userDetails
+				});
+			}
+			else
+			{
+				response.render('user/edit', {
+					title: 'Edit User',
+					baseUri: config.baseUri,
+					fullname: request.cookies.fullname,
+					user: userDetails
+				});
+			}
+		});
+		
+	}
+	else {
+		response.redirect('/users/login');
+	}
+});
+
 module.exports = router;

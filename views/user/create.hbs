@@ -45,6 +45,11 @@
 		</select>
 	</div>
 
+	<div class="form-group">
+		<label class="label-full" for="files">Profile Photo</label>
+		<input name="files" id="files" type="file" />
+	</div>
+
 	<div style="margin-top: 25px;">
 		<button id="register-submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
 		<a class="btn" href="/users/list">Cancel</a>
@@ -60,7 +65,7 @@
 		dataSource: {
 			type: "json", // specifies data protocol
 			transport: {
-				read: "{{baseUri}}api/usertypes/get_list_selection"
+				read: "{{baseUri}}/api/usertypes/get_list_selection"
 			}
 		}
 	});

@@ -1,0 +1,78 @@
+<form action="/api/users/update_user/?id={{user._id}}&mode=cms" method="post" role="form" enctype="multipart/form-data" class="properties-form">
+	{{#if show_error}}
+		<div class="form-group error-box">
+			An error occured while trying to create the record.<br />Please contact the administrator for more information.
+		</div>
+	{{/if}}
+
+	{{#if show_info}}
+		<div class="form-group info-box">
+			The user record has been updated.
+		</div>
+	{{/if}}
+
+	<div style="width: 100%; text-align: left; margin: 15px 0px;">
+		<a href="/users/list" class="btn">&larr;&nbsp;Back to list view</a>
+	</div>
+
+	<div class="form-group">
+		<label for="email" class="label-full">Email:</label>
+		<input class="k-textbox" type="email" name="email" id="email" value="{{user.email}}" autofocus required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="username" class="label-full">Username:</label>
+		<input class="k-textbox" type="text" name="username" id="username" value="{{user.username}}" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+	<div class="form-group">
+		<label for="firstName" class="label-full">First name:</label>
+		<input class="k-textbox" type="text" name="firstName" id="firstName" value="{{user.firstName}}" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="lastName" class="label-full">Last name:</label>
+		<input class="k-textbox" type="text" name="lastName" id="lastName" value="{{user.lastName}}" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="mobileNo" class="label-full">Mobile No:</label>
+		<input class="k-textbox" type="text" name="mobileNo" id="mobileNo" value="{{user.mobileNo}}" required aria-required style="display: inline-block; width: 100%;" />
+	</div>
+
+	<div class="form-group">
+		<label for="userType" class="label-full">User Type:</label>
+		<select id="userType" name="userType" style="width: 100%; display: inline-block;">
+		</select>
+	</div>
+
+	<div class="form-group">
+		<img src="{{user.profilePic}}" alt="{{user.firstName}} {{user.lastName}}" style="width: 200px; height: auto;" />
+	</div>
+
+	<div class="form-group">
+		<label class="label-full" for="files">Speaker Photo</label>
+		<input name="files" id="files" type="file" />
+	</div>
+
+	<div style="margin-top: 25px;">
+		<button id="register-submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+		<a class="btn" href="/users/list">Cancel</a>
+	</div>
+</form>
+
+<script language="JavaScript">
+
+	$('#userType').kendoDropDownList({
+		dataTextField: "typeName",
+		dataValueField: "_id",
+		dataSource: {
+			type: "json", // specifies data protocol
+			transport: {
+				read: "{{baseUri}}/api/usertypes/get_list_selection"
+			}
+		},
+		value: "{{user._userType._id}}"
+	});
+
+	$('#register-submit-button').kendoButton();
+</script>

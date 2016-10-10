@@ -174,22 +174,25 @@ router.post('/add_user', function (request, response) {
 	var filePath;
 	var fileName;
 	
-	var currDate = new Date().getUTCDate().toString();
-	var currMonth = new Date().getUTCMonth().toString();
-	var currYear = new Date().getUTCFullYear().toString();
+	var today = new Date();
+	var currDate = new Date(today.setHours(today.getHours() + 8)).getDate().toString();
+	var currMonth = new Date(today.setHours(today.getHours() + 8)).getMonth().toString();
+	var currYear = new Date(today.setHours(today.getHours() + 8)).getFullYear().toString();
+	var currHour = new Date(today.setHours(today.getHours() + 8)).getHours().toString();
+	var currMin = new Date(today.setHours(today.getHours() + 8)).getMinutes().toString();
 	
 	var userTypeId;
-	var user = new User( {
-		_userType: request.body.userType
+	var user = new User({
+		password: generatePassword()
 	});
 	
 	request.pipe(request.busboy);
 	request.busboy.on('file', function (fieldname, file, filename) {
 		
-		filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + filename);
-		user.profilePic = config.baseUri + 'uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
+		filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename);
+		user.profilePic = config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
 		
-		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + 'uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
+		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename + ' }');
 		
 		fstream = fs.createWriteStream(filePath);
 		file.pipe(fstream);
@@ -199,44 +202,41 @@ router.post('/add_user', function (request, response) {
 	});
 	
 	// Get values from all the drop down lists and textfields
-	request.busboy.on('field', function(key, value) {
+	request.busboy.on('field', function(fieldName, value) {
 		
-		if (key.toString() == 'username')
+		console.log(fieldName.toString() + ', ' + value.toString());
+		
+		if (fieldName.toString() == "username")
 			user.username = value.toString();
-		else if (key.toString() == 'email')
+		else if (fieldName.toString() == "email")
 			user.email = value.toString();
-		else if(key.toString() == 'firstName')
+		else if(fieldName.toString() == "firstName")
 			user.firstName = value.toString();
-		else if (key.toString() == 'lastName')
+		else if (fieldName.toString() == "lastName")
 			user.lastName = value.toString();
-		else if (key.toString() == 'mobileNo')
+		else if (fieldName.toString() == "mobileNo")
 			user.mobileNo = value.toString();
-		else if (key.toString() == 'userType')
+		else if (fieldName.toString() == "userType")
 			user._userType = userTypeId = value.toString();
 	});
-	
-	user.password = generatePassword();
-	
-	if (user) {
-		user.save(function(error) {
-			if (error) {
-				return response.json({Error: 'Error adding new user record.', OfficialError: error.toString(), dataPassed: user}).status(500).end();
-			}
+		
+	user.save(function(error) {
+		if (error) {
+			return response.json({Error: 'Error adding new user record.', OfficialError: error.toString(), dataPassed: user}).status(500).end();
+		}
 			
-			sendAutomatedEmail(user.firstName, user.lastName, user.email, user.password);
+		sendAutomatedEmail(user.firstName, user.lastName, user.email, user.password);
 			
-			UserType.findOne({_id: user._userType}, function(error, userType) {
-				userType._users.push(user);
-				userType.save();
-			});
-			
-			if(modeType != 'cms')
-				return response.json(user).status(201).end();
-			else
-				response.redirect('/users/create/?created=1');
+		UserType.findOne({_id: user._userType}, function(error, userType) {
+			userType._users.push(user);
+			userType.save();
 		});
-	}
-	
+			
+		if(modeType != 'cms')
+			return response.json(user).status(201).end();
+		else
+			response.redirect('/users/create/?created=1');
+	});
 });
 
 router.post('/update_user', function(request, response) {
@@ -247,61 +247,55 @@ router.post('/update_user', function(request, response) {
 	var filePath;
 	var fileName;
 	
-	var currDate = new Date().getUTCDate().toString();
-	var currMonth = new Date().getUTCMonth().toString();
-	var currYear = new Date().getUTCFullYear().toString();
+	var today = new Date();
+	var currDate = new Date(today.setHours(today.getHours() + 8)).getDate().toString();
+	var currMonth = new Date(today.setHours(today.getHours() + 8)).getMonth().toString();
+	var currYear = new Date(today.setHours(today.getHours() + 8)).getFullYear().toString();
+	var currHour = new Date(today.setHours(today.getHours() + 8)).getHours().toString();
+	var currMin = new Date(today.setHours(today.getHours() + 8)).getMinutes().toString();
 	
 	var id = request.query.id;
 	var userTypeId;
-	var userDetails = {
-		_userType: request.body.userType
-	};
 	
-	request.pipe(request.busboy);
-	request.busboy.on('file', function (fieldname, file, filename) {
-		
-		filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + filename);
-		userDetails.profilePic = config.baseUri + 'uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
-		
-		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + 'uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
-		
-		fstream = fs.createWriteStream(filePath);
-		file.pipe(fstream);
-		fstream.on('close', function () {
-			console.log('Photo Uploaded');
+	User.findOne({_id: id}).populate('_userType').exec(function(getUserError, userDetails) {
+		request.pipe(request.busboy);
+		request.busboy.on('file', function (fieldname, file, filename) {
+			
+			filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename);
+			userDetails.profilePic = config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
+			
+			console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename + ' }');
+			
+			fstream = fs.createWriteStream(filePath);
+			file.pipe(fstream);
+			fstream.on('close', function () {
+				console.log('Photo Uploaded');
+			});
 		});
-	});
-	
-	// Get values from all the drop down lists and textfields
-	request.busboy.on('field', function(key, value) {
 		
-		if (key.toString() == 'username')
-			userDetails.username = value.toString();
-		else if (key.toString() == 'email')
-			userDetails.email = value.toString();
-		else if (key.toString() == "password")
-			userDetails.password = value.toString();
-		else if(key.toString() == "firstName")
-			userDetails.firstName = value.toString();
-		else if (key.toString() == "lastName")
-			userDetails.lastName = value.toString();
-		else if (key.toString() == 'mobileNo')
-			user.mobileNo = value.toString();
-		else if (key.toString() == "userType")
-			userDetails._userType = userTypeId = value.toString();
-	});
-	
-	var query = {
-		_id: id
-	};
-	
-	User.findOneAndUpdate(query, userDetails, {new: true}, function(error, doc) {
-		if (modeType != 'cms') {
-			return response.json({Message: 'User Details Updated'}).status(200).end();
-		}
-		else {
-			response.redirect('/users/edit/?updated=1');
-		}
+		// Get values from all the drop down lists and textfields
+		request.busboy.on('field', function(key, value) {
+			
+			if (key.toString() == 'username')
+				userDetails.username = value.toString();
+			else if (key.toString() == 'email')
+				userDetails.email = value.toString();
+			else if(key.toString() == 'firstName')
+				userDetails.firstName = value.toString();
+			else if (key.toString() == 'lastName')
+				userDetails.lastName = value.toString();
+			else if (key.toString() == 'mobileNo')
+				userDetails.mobileNo = value.toString();
+			else if (key.toString() == "userType")
+				userDetails._userType = value.toString();
+		});
+		
+		userDetails.save();
+		
+		if (modeType != 'cms')
+			return response.json(userDetails).status(200).end();
+		else
+			response.redirect('/users/edit/?id=' + id + '&updated=1');
 	});
 });
 

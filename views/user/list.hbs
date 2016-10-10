@@ -16,7 +16,7 @@
 		dataSource: {
 			type: "json",
 			transport: {
-				read: "{{baseUri}}api/users/get_all_users"
+				read: "{{baseUri}}/api/users/get_all_users"
 			},
 			pageSize: 20
 		},
@@ -34,7 +34,7 @@
 				"<a class='form-btn grid-buttons k-button' href='/api/users/delete_user/?id=#: _id#'>Delete</a></span>",
 				field: "_id",
 				title: " ",
-				width: 168
+				width: 188
 			},
 			{
 				template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/userpostings/viewbyuser/?id=#: _id#'>View Posts</a>",
@@ -47,6 +47,13 @@
 				field: "_id",
 				title: " ",
 				width: 168
+			},
+			{
+				headerTemplate: "<div style='text-align: center;'>Photo</div>",
+				template: "<div style='text-align: center;'><img style='width: 90px; height: auto;' src='#: profilePic#' /></span>",
+				field: "profilePic",
+				title: "Photo",
+				width: 100
 			},
 			{
 				headerTemplate: "<div style='text-align: center;'>Username</div>",
