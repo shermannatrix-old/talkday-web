@@ -302,6 +302,30 @@ router.post('/update_user', function(request, response) {
 });
 
 /**
+ * /delete_user - this API method will delete a single user record.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-10-10 01:03pm
+ */
+router.get('/delete_user', function (request, response) {
+	var userId = request.query.id;
+	
+	User.findOneAndRemove({_id: userId}, function(error, user) {
+		if (error) {
+			if (modeType != 'cms')
+				return response.json({Error: error.toString(), Stack: error.stack.toString()}).status(200).end();
+			else
+				response.redirect('/users/list/' + request.query.id + '&error=1');
+		}
+		
+		if (modeType != 'cms')
+			return response.json({message: 'User record has been deleted.'}).status(200).end();
+		else
+			response.redirect('/users/list/?deleted=1');
+	});
+});
+
+/**
  * The sendAutomatedEmail method will send an email to the target user with instructions of the new account & how to log in.
  * @param firstName The user's First name.
  * @param lastName The user's Last name.
