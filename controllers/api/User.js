@@ -172,6 +172,11 @@ router.post('/update_mobile_token', function (request, response) {
 router.post('/add_user', function (request, response) {
 	var modeType = request.query.mode;
 	
+	var userTypeId;
+	var userDetails = new User({
+		password: generatePassword()
+	});
+	
 	var fstream;
 	var filePath;
 	var fileName;
@@ -183,16 +188,11 @@ router.post('/add_user', function (request, response) {
 	var currHour = new Date(today.setHours(today.getHours() + 8)).getHours().toString();
 	var currMin = new Date(today.setHours(today.getHours() + 8)).getMinutes().toString();
 	
-	var userTypeId;
-	var user = new User({
-		password: generatePassword()
-	});
-	
 	request.pipe(request.busboy);
-	request.busboy.on('file', function (fieldname, file, filename) {
+	request.busboy.on('file', function (fieldName, file, filename) {
 		
 		filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename);
-		user.profilePic = config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
+		userDetails.profilePic = '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
 		
 		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename + ' }');
 		
@@ -209,27 +209,27 @@ router.post('/add_user', function (request, response) {
 		console.log(fieldName.toString() + ', ' + value.toString());
 		
 		if (fieldName.toString() == "username")
-			user.username = value.toString();
+			userDetails.username = value.toString();
 		else if (fieldName.toString() == "email")
-			user.email = value.toString();
+			userDetails.email = value.toString();
 		else if(fieldName.toString() == "firstName")
-			user.firstName = value.toString();
+			userDetails.firstName = value.toString();
 		else if (fieldName.toString() == "lastName")
-			user.lastName = value.toString();
+			userDetails.lastName = value.toString();
 		else if (fieldName.toString() == "mobileNo")
-			user.mobileNo = value.toString();
+			userDetails.mobileNo = value.toString();
 		else if (fieldName.toString() == "userType")
-			user._userType = userTypeId = value.toString();
+			userDetails._userType = userTypeId = value.toString();
 	});
-		
-	user.save(function(error) {
+	
+	userDetails.save(function(error) {
 		if (error) {
 			return response.json({Error: 'Error adding new user record.', OfficialError: error.toString(), dataPassed: user}).status(500).end();
 		}
 			
 		sendAutomatedEmail(user.firstName, user.lastName, user.email, user.password);
 			
-		UserType.findOne({_id: user._userType}, function(error, userType) {
+		UserType.findOne({_id: userTypeId}).populate('_users').exec( function(getUserTypesError, userType) {
 			userType._users.push(user);
 			userType.save();
 		});
@@ -264,7 +264,7 @@ router.post('/update_user', function(request, response) {
 		request.busboy.on('file', function (fieldname, file, filename) {
 			
 			filePath = path.join(__dirname, '../../public/uploads/profiles/', currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename);
-			userDetails.profilePic = config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
+			userDetails.profilePic = '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename;
 			
 			console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/profiles/' + currYear + '-' + currMonth + '-' + currDate + '-' + currHour + currMin + '-' + filename + ' }');
 			
