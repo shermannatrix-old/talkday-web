@@ -41,6 +41,69 @@ router.get('/get_all_events', function (request, response) {
 });
 
 /**
+ * /get_events_report/?filter=[filterType] - this API method will return report data depending on the filterType.
+ * Http Method		: GET
+ * Created By		: Sherman Chen
+ * Date Created		: 2016-10-28 11:02am
+ */
+router.get('/get_events_report', function (request, response) {
+	var filterType = request.query.filter;
+
+	Event.find({}, function(getCountError, eventCount) {
+		if (filterType == 'category') {
+			Event.aggregate([
+				{
+					$group: {
+						_id: '$_eventCategory',  //$region is the column name in collection,
+						count: {$sum: 1}
+					}
+				}
+			], function (error, events) {
+				if (error) {
+					console.log(error.toString());
+				}
+
+				events.forEach(function(event, index) {
+					event.percentage = ( event.count / eventCount.length ) * 100.0;
+
+					console.log('Percentage: ' + event.percentage);
+				});
+
+				EventCategory.populate(events, { "path": "_id" }, function(err,results) {
+					return response.json(results).status(200).end();
+				});
+			});
+		}
+		else if (filterType == 'type') {
+			Event.aggregate([
+				{
+					$group: {
+						_id: '$_eventType',  //$region is the column name in collection,
+						count: {$sum: 1}
+					}
+				}
+			], function (error, events) {
+				if (error) {
+					console.log(error.toString());
+				}
+
+				events.forEach(function(event, index) {
+					event.percentage = ( event.count / eventCount.length ) * 100.0;
+
+					console.log('Percentage: ' + event.percentage);
+				});
+
+				EventType.populate(events, { "path": "_id" }, function(err,results) {
+					return response.json(results).status(200).end();
+				});
+			});
+		}
+	});
+
+
+});
+
+/**
  * /assign_speakers/?event=[eventId]&speaker=[speakerId] - this API method will add the speaker to the selected Event.
  * Http Method		: GET
  * Created By		: Sherman Chen

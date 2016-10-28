@@ -1,1 +1,63 @@
 <div>Welcome back, <strong>{{fullname}}</strong></div>
+
+<div style="margin: 5% auto;">
+    <div id="eventByTypeChart" style="width: 50%; float: left;"></div>
+    <div id="eventByCategoryChart" style="width: 50%; float: left;"></div>
+</div>
+
+
+<script>
+    $("#eventByTypeChart").kendoChart({
+        title: {
+            text: "No. of Events (by Event Type)"
+        },
+        legend: {
+            position: "bottom"
+        },
+        dataSource: {
+            transport: {
+                read: {
+                    url: "http://localhost:2080/api/events/get_events_report/?filter=type"
+                }
+            }
+        },
+        series: [{
+            type: "donut",
+            field: "percentage",
+            categoryField: "_id.typeName",
+            explodeField: "explode"
+        }],
+        seriesColors: ["#42a7ff", "#666666"],
+        tooltip: {
+            visible: true,
+            template: "${ category } - ${ value }%"
+        }
+    });
+
+    $("#eventByCategoryChart").kendoChart({
+        title: {
+            text: "No. of Events (by Category)"
+        },
+        legend: {
+            position: "bottom"
+        },
+        dataSource: {
+            transport: {
+                read: {
+                    url: "http://localhost:2080/api/events/get_events_report/?filter=category"
+                }
+            }
+        },
+        series: [{
+            type: "donut",
+            field: "percentage",
+            categoryField: "_id.categoryName",
+            explodeField: "explode"
+        }],
+        seriesColors: ["#42a7ff", "#666666", "#999999", "#cccccc"],
+        tooltip: {
+            visible: true,
+            template: "${ category } - ${ value }%"
+        }
+    });
+</script>
