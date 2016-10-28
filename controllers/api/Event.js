@@ -2,12 +2,10 @@
  * The Event.js controller will contain methods for creating new Events and also retrieving those values for listing purposes.
  * Created by		: Sherman Chen
  * Date Created		: 2016-09-07 7:28pm
- * Date Modified	: 2016-10-06 05:39pm
+ * Date Modified	: 2016-10-28 02:46pm
  * ===============================================================================================================
  * Update Log:
- * (1) Remove the API method /get_event_speakers
- * (2) Modified the API method /assign_speakers
- * (3) Added the API method /remove_event_speaker
+ * (1) Added API method /get_events_report
  */
 
 'use strict';
