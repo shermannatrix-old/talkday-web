@@ -1,0 +1,71 @@
+<form action="/api/newsarticles/create_new_article/?mode=cms" method="post" role="form" class="properties-form">
+    {{#if show_error}}
+        <div class="form-group error-box">
+            An error occured while trying to create the record.<br />Please contact the administrator for more information.
+        </div>
+    {{/if}}
+
+    {{#if show_info}}
+        <div class="form-group info-box">
+            The news article: {{article_title}} has been added.
+        </div>
+    {{/if}}
+
+    <div style="width: 100%; text-align: left; margin: 15px 0px;">
+        <a href="/newsarticles/list" class="btn">&larr;&nbsp;Back to list view</a>
+    </div>
+
+    <div class="form-group">
+        <label for="articleTitle" class="label-full">Article Title:</label>
+        <input class="k-textbox" type="text" name="articleTitle" id="articleTitle" autofocus required aria-required style="display: inline-block; width: 100%;" />
+    </div>
+
+    <div class="form-group">
+        <label for="articleSummary" class="label-full">Article Summary</label>
+        <textarea id="articleSummary" name="articleSummary" class="k-textbox" required aria-required style="display: inline-block; width: 100%;" rows="5"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="articleContent" class="label-full">Article Content</label>
+        <textarea id="articleContent" name="articleContent" class="k-textbox" required aria-required style="display: inline-block; width: 100%; height: 550px;" rows="15"></textarea>
+    </div>
+
+    <div style="margin-top: 25px;">
+        <button id="submit-button" type="submit" class="k-primary form-btn">Submit</button>&nbsp;
+        <a class="btn" href="/newsarticles/list">Cancel</a>
+    </div>
+</form>
+
+<script language="JavaScript">
+    $('#submit-button').kendoButton();
+
+    $("#articleContent").kendoEditor({
+        tools: [
+            "bold",
+            "italic",
+            "underline",
+            "strikethrough",
+            "justifyLeft",
+            "justifyCenter",
+            "justifyRight",
+            "justifyFull",
+            "createLink",
+            "unlink",
+            "insertImage",
+            "insertFile",
+            "createTable",
+            "addColumnLeft",
+            "addColumnRight",
+            "addRowAbove",
+            "addRowBelow",
+            "deleteRow",
+            "deleteColumn",
+            "foreColor",
+            "backColor"
+        ],
+        resizable: {
+            content: true,
+            toolbar: true
+        }
+    });
+</script>

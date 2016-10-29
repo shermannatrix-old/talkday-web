@@ -112,6 +112,8 @@ var feedbackApiController = require('./controllers/api/Feedback');
 var rsvpStatusApiController = require('./controllers/api/RsvpStatus');
 var userEventRsvpApiController = require('./controllers/api/UserEventRsvp');
 
+var newsArticleApiController = require('./controllers/api/NewsArticle');
+
 /**
  * API Routes
  */
@@ -128,6 +130,7 @@ app.use('/api/feedbackstatuses', feedbackStatusApiController);
 app.use('/api/feedbacks', feedbackApiController);
 app.use('/api/rsvpstatuses', rsvpStatusApiController);
 app.use('/api/usereventrsvps', userEventRsvpApiController);
+app.use('/api/newsarticles', newsArticleApiController);
 
 /**
  * Routes Controllers
@@ -140,6 +143,7 @@ var eventTypeController = require('./controllers/routes/EventType');
 var eventVenueController = require('./controllers/routes/EventVenue');
 var eventController = require('./controllers/routes/Event');
 var eventSpeakerController = require('./controllers/routes/EventSpeaker');
+var newsArticleController = require('./controllers/routes/NewsArticle');
 
 app.use('/', homeController);
 app.use('/users', userController);
@@ -149,6 +153,7 @@ app.use('/eventtypes', eventTypeController);
 app.use('/eventvenues', eventVenueController);
 app.use('/events', eventController);
 app.use('/eventspeakers', eventSpeakerController);
+app.use('/newsarticles', newsArticleController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
