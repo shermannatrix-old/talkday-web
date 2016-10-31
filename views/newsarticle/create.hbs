@@ -52,7 +52,7 @@
             "createLink",
             "unlink",
             "insertImage",
-            "insertFile",
+            //"insertFile",
             "createTable",
             "addColumnLeft",
             "addColumnRight",
@@ -66,6 +66,14 @@
         resizable: {
             content: true,
             toolbar: true
+        },
+        imageBrowser: {
+            transport: {
+                read: '/api/newsarticles/get_image_library',
+                imageUrl: '{{baseUri}}/uploads/image-library/{0}',
+                //uploadUrl: '/api/newsarticles/upload_image',
+                thumbnailUrl: '{{baseUri}}/api/newsarticles/get_thumbnail_image'
+            }
         }
     });
 </script>

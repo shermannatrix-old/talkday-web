@@ -71,7 +71,7 @@ router.get('/create', function(request, response) {
 				title: 'Add New Article',
 				baseUri: config.baseUri,
 				show_info: 'Record created.',
-				article_title: request.query.title,
+				article_title: request.query.article,
 				fullname: request.cookies.fullname
 			});
 		}
@@ -98,7 +98,7 @@ router.get('/edit', function(request, response) {
 	if (request.cookies.fullname) {
 		NewsArticle.findOne({_id: request.query.id}, function (error, newsArticle) {
 			if (request.query.error) {
-				response.render('eventvenue/edit', {
+				response.render('newsarticle/edit', {
 					title: 'Edit News Article',
 					baseUri: config.baseUri,
 					show_error: 'Error occured.',
@@ -107,7 +107,7 @@ router.get('/edit', function(request, response) {
 				});
 			}
 			else if (request.query.updated) {
-				response.render('eventvenue/edit', {
+				response.render('newsarticle/edit', {
 					title: 'Edit News Article',
 					baseUri: config.baseUri,
 					show_info: 'Record Updated.',
@@ -116,7 +116,7 @@ router.get('/edit', function(request, response) {
 				});
 			}
 			else {
-				response.render('eventvenue/edit', {
+				response.render('newsarticle/edit', {
 					title: 'Edit News Article',
 					baseUri: config.baseUri,
 					newsArticle: newsArticle,

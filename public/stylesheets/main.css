@@ -210,3 +210,8 @@ h1 {
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
+
+.k-thumb .k-image {
+	width: 80px;
+	height: auto;
+}

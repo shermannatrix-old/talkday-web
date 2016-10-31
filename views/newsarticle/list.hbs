@@ -1,0 +1,116 @@
+{{#if show_error}}
+    <div class="form-group error-box">
+        An error occured while trying to delete the record.<br />Please contact the administrator for more information.
+    </div>
+{{/if}}
+
+{{#if show_info}}
+    <div class="form-group info-box">
+        The event venue record has been deleted.
+    </div>
+{{/if}}
+
+<div id="grid-news-articles" class="grid-listing-view"></div>
+
+<div class="buttons-panel">
+    <a id="add-event-type" class="control-buttons form-btn k-primary" href="/eventvenues/create" type="button">Add Event Type</a>&nbsp;
+</div>
+
+<div id="readArticleWindow">
+    <input type="hidden" id="hdnArticleId" name="hdnArticleId" value="" />
+    <div id="articleTitle" style="width: 100%; float: left; display: inline-block; font-weight: bold; font-size: 15px;"></div>
+    <div id="articleContent" style="margin-top: 10px; width: 100%; float: left; display: inline-block;"></div>
+    <div style="margin-top: 10px; width: 100%; float: left; display: inline-block; text-align: right;">
+        <a href="javascript:void(0)" onclick="editArticleClick()" class="control-buttons form-btn k-primary">Edit Article</a>
+        <a href="javascript:void(0)" onclick="closeWindow()" class="control-buttons form-btn k-primary">Close Window</a>
+    </div>
+</div>
+
+<script language="JavaScript">
+    $("#readArticleWindow").kendoWindow({
+        width: "600px",
+        title: "Article Details",
+        visible: false,
+        actions: [
+            "Pin",
+            "Minimize",
+            "Maximize",
+            "Close"
+        ]
+    }).data('kendoWindow');
+
+    $('.control-buttons').kendoButton();
+
+    $("#grid-news-articles").kendoGrid({
+        dataSource: {
+            type: "json",
+            transport: {
+                read: "{{baseUri}}/api/newsarticles/get_all_articles"
+            },
+            pageSize: 20
+        },
+        height: 550,
+        groupable: false,
+        sortable: true,
+        pageable: false,
+        columns: [
+            {
+                template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='/eventvenues/edit/?id=#: _id#'>Edit</a>&nbsp;" +
+                "<a class='form-btn grid-buttons k-button' href='/api/eventvenues/delete_venue/?id=#: _id#'>Delete</a></span>",
+                field: "_id",
+                title: " ",
+                width: 168
+            },
+            {
+                template: "<div style='text-align: center;'><a class='form-btn grid-buttons k-button' href='javascript:void(0)' onclick='viewArticle(\"#: _id#\")'>Read Article</a>",
+                field: "_id",
+                title: " ",
+                width: 168
+            },
+            {
+                field: "articleTitle",
+                title: "Article Title"
+            },
+            {
+                field: "articleSummary",
+                title: "ArticleSummary"
+            },
+            {
+                field: "dateCreated",
+                title: "Date Created",
+                template: "<span>#: kendo.toString(new Date(kendo.parseDate(dateCreated)), 'dd-MM-yyyy h:mm:ss tt')#</span>",
+                width: 200
+            },
+            {
+                field: "dateModified",
+                title: "Date Modified",
+                template: "<span>#: kendo.toString(new Date(kendo.parseDate(dateModified)), 'dd-MM-yyyy h:mm:ss tt')#</span>",
+                width: 200
+            },
+        ]
+    });
+
+    function viewArticle(id) {
+        $.get('{{baseUri}}/api/newsarticles/get_article_details/?id=' + id, function(data) {
+
+            $('#hdnArticleId').val(id);
+
+            var readArticleWin = $("#readArticleWindow").data('kendoWindow');
+            readArticleWin.center().open();
+
+            $('#articleTitle').html(data.articleTitle);
+            $('#articleContent').html(data.articleContent);
+        });
+    }
+
+    function closeWindow() {
+        var readArticleWin = $("#readArticleWindow").data('kendoWindow');
+        readArticleWin.close();
+    }
+
+    function editArticleClick() {
+        var articleId = $('#hdnArticleId').val();
+
+        location.assign('/newsarticles/edit/?id=' + articleId + '&mode=cms');
+    }
+</script>
