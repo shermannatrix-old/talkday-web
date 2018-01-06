@@ -158,9 +158,9 @@ router.post('/add_speaker', function (request, response) {
 	request.busboy.on('file', function (fieldname, file, filename) {
 		
 		filePath = path.join(__dirname, '../../public/uploads/speakers/', currYear + '-' + currMonth + '-' + currDate + '-' + filename);
-		eventSpeaker.speakerPhoto = config.baseUri + '/uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
+		eventSpeaker.speakerPhoto = config.baseUri + 'uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
 		
-		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
+		console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + 'uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
 		
 		fstream = fs.createWriteStream(filePath);
 		file.pipe(fstream);
@@ -251,9 +251,9 @@ router.post('/update_speaker_details', function (request, response) {
 		request.busboy.on('file', function (fieldname, file, filename) {
 			
 			filePath = path.join(__dirname, '../../public/uploads/speakers/', currYear + '-' + currMonth + '-' + currDate + '-' + filename);
-			speakerDetails.speakerPhoto = config.baseUri + '/uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
+			speakerDetails.speakerPhoto = config.baseUri + 'uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename;
 			
-			console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + '/uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
+			console.log('{ filePath: ' + filePath + ', fileName: ' + config.baseUri + 'uploads/speakers/' + currYear + '-' + currMonth + '-' + currDate + '-' + filename + ' }');
 			
 			fstream = fs.createWriteStream(filePath);
 			file.pipe(fstream);

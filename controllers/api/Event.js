@@ -349,8 +349,10 @@ router.post('/update_event', function (request, response) {
 	};
 	
 	if (!isAllDay) {
-		updateData.startTime = dateFormat(finalStartDate, 'GMT:h:MM TT');
-		updateData.endTime = dateFormat(finalEndDate, 'GMT:h:MM TT');
+		updateData.startTime = dateFormat(finalStartDate.setHours(finalStartDate.getHours() + 8), 'GMT:h:MM TT');
+		updateData.endTime = dateFormat(finalEndDate.setHours(finalStartDate.getHours() + 8), 'GMT:h:MM TT');
+
+		console.log("Start Time: " + updateData.startTime + ", End Time: " + updateData.endTime);
 	}
 	
 	var query = {

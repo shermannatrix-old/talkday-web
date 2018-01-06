@@ -113,8 +113,8 @@
 	var startDate = new Date('{{event.startDate}}');
 	var endDate = new Date('{{event.endDate}}');
 
-	var finalStartDate = new Date(startDate.setHours(startDate.getHours() - 8));
-	var finalEndDate = new Date(endDate.setHours(endDate.getHours() - 8));
+	var finalStartDate = new Date(startDate.setHours(startDate.getHours()));
+	var finalEndDate = new Date(endDate.setHours(endDate.getHours()));
 
 	$('#startDate').kendoDateTimePicker({
 		min: new Date(today.getFullYear(), today.getMonth(), currDate, currHour, 0, 0),
@@ -166,7 +166,7 @@
 		dataSource: {
 			type: "json", // specifies data protocol
 			transport: {
-				read: "{{baseUri}}/api/eventtypes/get_list_selection"
+				read: "{{baseUri}}api/eventtypes/get_list_selection"
 			}
 		},
 		value: "{{event._eventType._id}}"
@@ -178,7 +178,7 @@
 		dataSource: {
 			type: "json", // specifies data protocol
 			transport: {
-				read: "{{baseUri}}/api/eventcategories/get_list_selection"
+				read: "{{baseUri}}api/eventcategories/get_list_selection"
 			}
 		},
 		value: "{{event._eventCategory._id}}"
@@ -192,7 +192,7 @@
 		dataSource: {
 			type: "json", // specifies data protocol
 			transport: {
-				read: "{{baseUri}}/api/eventvenues/get_list_selection"
+				read: "{{baseUri}}api/eventvenues/get_list_selection"
 			}
 		},
 		value: "{{event._eventVenue._id}}"
@@ -204,7 +204,7 @@
 		dataSource: {
 			type: "json", // specifies data protocol
 			transport: {
-				read: "{{baseUri}}/api/eventstatuses/get_list_selection"
+				read: "{{baseUri}}api/eventstatuses/get_list_selection"
 			}
 		},
 		value: "{{event._eventStatus._id}}"
@@ -213,7 +213,7 @@
 	$('#available-speakers-grid').kendoGrid({
 		dataSource: {
 			transport: {
-				read: "{{baseUri}}/api/eventspeakers/get_available_speakers/?event={{event._id}}"
+				read: "{{baseUri}}api/eventspeakers/get_available_speakers/?event={{event._id}}"
 			},
 			pageSize: 20,
 			serverPaging: true
@@ -254,7 +254,7 @@
 	$('#assigned-speakers-grid').kendoGrid({
 		dataSource: {
 			transport: {
-				read: "{{baseUri}}/api/eventspeakers/get_assigned_speakers/?event={{event._id}}"
+				read: "{{baseUri}}api/eventspeakers/get_assigned_speakers/?event={{event._id}}"
 			},
 			pageSize: 20,
 			serverPaging: true
@@ -309,7 +309,7 @@
 	});
 
 	function viewSpeakerBio(speakerId) {
-		$.get('{{baseUri}}/api/eventspeakers/get_speaker_details/?id=' + speakerId, function(result) {
+		$.get('{{baseUri}}api/eventspeakers/get_speaker_details/?id=' + speakerId, function(result) {
 
 			console.log(result);
 
